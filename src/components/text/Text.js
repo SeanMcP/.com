@@ -10,6 +10,37 @@ const A = ({ children, to }) => (
 export const About = () => (
     <React.Fragment>
         <p>
+            Born and raised in State College, Pennsylvania, I graduated from
+            Edinboro University with a degree in Middle-level Education. After
+            working for three years as a teacher in Pennsylvania and Georgia, I
+            decided to switch careers.
+        </p>
+        <p>
+            I enrolled in The Iron Yard, a coding bootcamp in Atlanta, Georgia.
+            After a four-month whirlwind, I graduated with a certificate in
+            Front-end Engineering with React. In God's providence, I was given a
+            software developer position at TSYS Digital Innovation and haven't
+            looked back since.
+        </p>
+        <p>
+            When I'm not coding at work and at home, I enjoy spending time with
+            my wife (married '14), son (born '18), and three-legged dog (adopted
+            '17). We like to play board games and would love{' '}
+            <A to="https://twitter.com/_seanmcp">
+                to hear your recommendations
+            </A>
+            .
+        </p>
+        <p>
+            I also like soccer a little too much, but that's a topic for another
+            page.
+        </p>
+    </React.Fragment>
+);
+
+export const LifeStory = () => (
+    <React.Fragment>
+        <p>
             I was born and raised in a little town called State College,
             Pennsylvania. You have probably not heard of it, you could find it
             by looking on a map for the exact center of Pennsylvania. You may be
@@ -164,9 +195,7 @@ export const About = () => (
             received my acceptance letter.
         </p>
         <h2>A still small voice</h2>
-        <p>
-            It was about this time that my life took a turn.
-        </p>
+        <p>It was about this time that my life took a turn.</p>
         <h2>Edinboro University</h2>
         <p>
             Edinboro University is located in Edinboro, Pennsylvania. The region
