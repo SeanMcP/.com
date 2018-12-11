@@ -8896,7 +8896,7 @@ react-error-overlay@^3.0.0:
 
 react-feather@^1.1.4:
   version "1.1.4"
-  resolved "http://artifactrepo.tpp.tsysecom.com:9090/repository/npmproxy/react-feather/-/react-feather-1.1.4.tgz#d0143da95f9d52843cf13a553091573a7c617897"
+  resolved "https://registry.yarnpkg.com/react-feather/-/react-feather-1.1.4.tgz#d0143da95f9d52843cf13a553091573a7c617897"
 
 react-helmet@^5.2.0:
   version "5.2.0"
