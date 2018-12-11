@@ -3,7 +3,7 @@ module.exports = {
         title: 'Sean McPherson',
         author: 'Sean McPherson',
         description: 'A personal website for Sean McPherson',
-        siteUrl: 'https://gatsbyjs.github.io/gatsby-starter-blog/'
+        siteUrl: 'https://seanmcp.com'
     },
     pathPrefix: '/gatsby-starter-blog',
     plugins: [
@@ -52,9 +52,9 @@ module.exports = {
                 short_name: `SeanMcP`,
                 start_url: `/`,
                 background_color: `#ffffff`,
-                theme_color: `#663399`,
+                theme_color: `#42A5F5`,
                 display: `minimal-ui`,
-                icon: `src/assets/seanmcp.jpeg`
+                icon: `src/assets/seanmcp.png`
             }
         },
         `gatsby-plugin-offline`,

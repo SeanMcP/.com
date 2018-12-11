@@ -1,10 +1,10 @@
 {
   "name": "seanmcp",
-  "description": "Website for Sean McPherson",
+  "description": "Personal website for Sean McPherson",
   "version": "1.0.0",
   "author": "Sean McPherson <seanmcp25@gmail.com>",
   "bugs": {
-    "url": "https://github.com/seanmcp/seanmcp.github.io/issues"
+    "url": "https://github.com/seanmcp/.com/issues"
   },
   "dependencies": {
     "gatsby": "^2.0.19",
@@ -36,7 +36,7 @@
     "gh-pages": "^2.0.1",
     "prettier": "^1.14.2"
   },
-  "homepage": "https://github.com/seanmcp/seanmcp.github.io#readme",
+  "homepage": "https://github.com/seanmcp/.com#readme",
   "keywords": [
     "seanmcp",
     "sean mcpherson",
@@ -47,7 +47,7 @@
   "main": "n/a",
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/seanmcp/seanmcp.github.io.git"
+    "url": "git+https://github.com/seanmcp/.com.git"
   },
   "scripts": {
     "dev": "gatsby develop",

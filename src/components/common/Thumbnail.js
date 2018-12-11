@@ -6,7 +6,7 @@ const Thumbnail = ({ className }) => {
         <img
             alt={"An illustration of Sean McPherson's head"}
             className={`Thumbnail ${className ? className : ''}`}
-            src={require('../../assets/seanmcp.jpeg')}
+            src={require('../../assets/seanmcp.png')}
         />
     );
 };
