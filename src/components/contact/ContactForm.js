@@ -6,7 +6,7 @@ const ContactForm = ({ heading }) => {
         <React.Fragment>
             {heading && <h2 className={'ContactForm__heading'}>{heading}</h2>}
             <form
-                action=""
+                // action=""
                 className={'ContactForm'}
                 name="contact"
                 method="POST"
