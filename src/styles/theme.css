@@ -5,6 +5,8 @@
     --secondary-bg: var(--gray800);
     --tertiary-bg: var(--green600);
 
+    --primary-border: var(--gray200);
+
     --primary-text: var(--secondary-bg);
     --secondary-text: var(--primary-bg);
     --tertiary-text: var(--primary-bg);

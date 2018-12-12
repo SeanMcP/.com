@@ -4,7 +4,7 @@
  * @author Sean McPherson
  */
 
- :root {
+ .gatsby-highlight {
     --font-family: Menlo, Monaco, "Roboto Sans", Consolas,
       "Andale Mono", "Ubuntu Mono", monospace;
     --background: var(--gray200);
