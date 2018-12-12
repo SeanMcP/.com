@@ -24,6 +24,7 @@ body {
 /* Components */
 @import './components/ArticleCategories.css';
 @import './components/CategoryLink.css';
+@import './components/ContactForm.css';
 @import './components/Footer.css';
 @import './components/Header.css';
 @import './components/Layout.css';

@@ -3,6 +3,7 @@ import { graphql } from 'gatsby';
 import Helmet from 'react-helmet';
 import get from 'lodash/get';
 
+import ContactForm from '../components/contact/ContactForm';
 import Layout from '../components/Layout';
 import PageHeader from '../components/common/PageHeader';
 
@@ -22,20 +23,19 @@ const ContactPage = ({ data, location }) => {
             <p>
                 Do you have an excited job opportunity for me?{' '}
                 <a
-                    href="https://areyoulookingforwork.seanmcp.com"
+                    href="https://seanmcp.github.io/areyoulookingforwork"
                     target="_blank"
                 >
-                    Check my availability
+                    Check my availability here
                 </a>
-                .
-            </p>
-            <p>
-                For all other inquiries, you can find my contact details on{' '}
+                . For other inquiries, you can find my contact details on{' '}
                 <a href="https://linkedin.com/in/seanmcp" target="_blank">
                     LinkedIn
                 </a>
                 .
             </p>
+            {/* <hr/> */}
+            <ContactForm />
         </Layout>
     );
 };
