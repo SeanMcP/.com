@@ -22,9 +22,9 @@ const SuccessPage = ({ data, location }) => {
             <PageHeader>
                 <h1>Success</h1>
             </PageHeader>
-            <p>Thanks for reaching out! I'll get back to you as soon as possible.</p>
-            <hr />
+            <p>Thanks for reaching out! I'll get back to you as soon as possible. In the meantime, checkout the latest article from the blog:</p>
             <h2>Latest article</h2>
+            <hr />
             {posts.map(({ node }) => (
                 <PostPreview
                     key={node.fields.slug}
