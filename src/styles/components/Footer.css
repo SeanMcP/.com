@@ -2,12 +2,13 @@
     background: var(--gray100);
 }
 
-.Responsive--footer {
+.Footer ._container {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;
 }
 
-.Footer p {
+.Footer ._attribution,
+.Footer ._sdg {
     margin: 0;
 }

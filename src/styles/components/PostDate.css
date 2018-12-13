@@ -3,6 +3,6 @@
     display: flex;
 }
 
-.PostDate__icon {
+.PostDate ._icon {
     margin-right: 0.5rem;
 }

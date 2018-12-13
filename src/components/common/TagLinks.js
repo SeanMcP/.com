@@ -6,8 +6,8 @@ import Icon from '../common/Icon';
 
 const TagLinks = ({ hideIcon, modifier, tags }) => {
     return (
-        <div className={`TagLinks ${modifier ? `TagLinks--${modifier}` : ''}`}>
-            {!hideIcon && <Icon className={'TagLinks__icon'} icon={'Tag'} />}
+        <div className={`TagLinks ${modifier ? `-${modifier}` : ''}`}>
+            {!hideIcon && <Icon className={'_icon'} icon={'Tag'} />}
             {tags.map(tag => (
                 <SearchLink key={tag} queryKey={'tags'} queryValue={tag} />
             ))}

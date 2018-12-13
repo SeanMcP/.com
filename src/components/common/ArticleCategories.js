@@ -6,11 +6,11 @@ import CategoryLink from './CategoryLink';
 const ArticleCategories = ({ list }) => {
     return (
         <section className={'ArticleCategories'}>
-            <span className={'ArticleCategories__title'}>Categories:</span>
-            <ul className={'ArticleCategories__list'}>
+            <span className={'_title'}>Categories:</span>
+            <ul className={'_list'}>
                 {list.map(category => (
                     <li
-                        className={'ArticleCategories__list-item'}
+                        className={'_list-item'}
                         key={category.fieldValue}
                     >
                         <CategoryLink category={category.fieldValue} hideIcon />

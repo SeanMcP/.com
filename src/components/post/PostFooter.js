@@ -15,9 +15,9 @@ const PostFooter = ({
     tags
 }) => (
     <footer
-        className={`PostFooter ${modifier ? `PostFooter--${modifier}` : ''}`}
+        className={`PostFooter ${modifier ? `-${modifier}` : ''}`}
     >
-        {date && <PostDate date={date} modifier="post-footer" />}
+        {date && <PostDate date={date} className="_post-date" />}
         {category && <CategoryLink category={category} />}
         <TagLinks modifier={'post-footer'} tags={tags} />
         {articleHref && articleTitle && (

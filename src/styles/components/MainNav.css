@@ -1,7 +1,7 @@
-.MainNav__link:not(:last-child) {
+.MainNav ._link:not(:last-child) {
     margin-right: 1rem;
 }
 
-.MainNav__link--current {
+.MainNav ._link.-current {
     text-decoration: underline;
 }

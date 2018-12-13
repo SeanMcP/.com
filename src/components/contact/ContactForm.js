@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const ContactForm = ({ heading }) => {
     return (
         <React.Fragment>
-            {heading && <h2 className={'ContactForm__heading'}>{heading}</h2>}
+            {heading && <h2 className={'_heading'}>{heading}</h2>}
             <form
                 action="success"
                 className={'ContactForm'}
@@ -12,37 +12,37 @@ const ContactForm = ({ heading }) => {
                 method="POST"
                 data-netlify="true"
             >
-                <label className={'ContactForm__label'}>
-                    <p className={'ContactForm__label-text'}>Name</p>
+                <label className={'_label'}>
+                    <p className={'_label-text'}>Name</p>
                     <input
-                        className={'ContactForm__input'}
+                        className={'_input'}
                         type="text"
                         name="name"
                     />
                 </label>
-                <label className={'ContactForm__label'}>
-                    <p className={'ContactForm__label-text'}>Email</p>
+                <label className={'_label'}>
+                    <p className={'_label-text'}>Email</p>
                     <input
-                        className={'ContactForm__input'}
+                        className={'_input'}
                         type="email"
                         name="email"
                     />
                 </label>
-                <label className={'ContactForm__label'}>
-                    <p className={'ContactForm__label-text'}>Message</p>
+                <label className={'_label'}>
+                    <p className={'_label-text'}>Message</p>
                     <textarea
-                        className={'ContactForm__textarea'}
+                        className={'_textarea'}
                         name="message"
                     />
                 </label>
-                <footer className="ContactForm__button-container">
+                <footer className="_button-container">
                     <input
-                        className="ContactForm__button ContactForm__button--secondary"
+                        className="_button -secondary"
                         type="reset"
                         value="Cancel"
                     />
                     <input
-                        className="ContactForm__button ContactForm__button--primary"
+                        className="_button -primary"
                         type="submit"
                         value="Submit"
                     />

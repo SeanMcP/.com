@@ -9,12 +9,12 @@ const CategoryLink = ({ category, hideIcon, lede, modifier }) => {
     return (
         <div
             className={`CategoryLink ${
-                modifier ? `CategoryLink--${modifier}` : ''
+                modifier ? `-${modifier}` : ''
             }`}
         >
             {!hideIcon && (
-                <Icon className={'CategoryLink__icon'} icon={'Folder'} />
-                // <Folder className={'CategoryLink__icon'} size={20} />
+                <Icon className={'_icon'} icon={'Folder'} />
+                // <Folder className={'_icon'} size={20} />
             )}
             <SearchLink queryKey={'categories'} queryValue={category} />
         </div>

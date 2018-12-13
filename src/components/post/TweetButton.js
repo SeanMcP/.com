@@ -10,8 +10,8 @@ const TweetButton = props => {
     const href = `https://twitter.com/intent/tweet?text=${tweet}`;
     return (
         <a className="TweetButton" href={href} target="_blank">
-            <Icon className={'TweetButton__icon'} icon={'Twitter'} />
-            <span className="TweetButton__text">Share</span>
+            <Icon className={'_icon'} icon={'Twitter'} />
+            <span className="_text">Share</span>
         </a>
     );
 };

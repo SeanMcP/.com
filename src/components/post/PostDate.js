@@ -3,13 +3,13 @@ import PropTypes from 'prop-types';
 
 import Icon from '../common/Icon';
 
-const PostDate = ({ date, hideIcon, modifier }) => {
+const PostDate = ({ className, date, hideIcon }) => {
     return (
-        <div className={`PostDate ${modifier ? `PostDate--${modifier}` : ''}`}>
+        <div className={`PostDate ${className ? className : ''}`}>
             {!hideIcon && (
-                <Icon className={'PostDate__icon'} icon={'Calendar'} />
+                <Icon className={'_icon'} icon={'Calendar'} />
             )}
-            <time className="PostDate__date">{date}</time>
+            <time className="_date">{date}</time>
         </div>
     );
 };

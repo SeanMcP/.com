@@ -12,7 +12,7 @@ class Layout extends React.Component {
         return (
             <div className="Layout">
                 <Header location={location} title={title} />
-                <Responsive modifier={'layout'}>{children}</Responsive>
+                <Responsive className={'_container'}>{children}</Responsive>
                 <Footer />
             </div>
         );

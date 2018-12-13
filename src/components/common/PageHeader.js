@@ -4,7 +4,7 @@ import PropTypes from 'prop-types';
 const PageHeader = ({ centered, children }) => {
     return (
         <header
-            className={`PageHeader ${centered ? 'PageHeader--centered' : ''}`}
+            className={`PageHeader ${centered ? '-centered' : ''}`}
         >
             {children}
             <hr />

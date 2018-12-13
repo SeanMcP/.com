@@ -3,6 +3,6 @@
     display: flex;
 }
 
-.CategoryLink__icon {
+.CategoryLink ._icon {
     margin-right: 0.5rem;
 }

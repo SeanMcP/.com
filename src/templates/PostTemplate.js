@@ -26,7 +26,7 @@ const PostTemplate = props => {
             <article className="PostTemplate">
                 <PageHeader centered>
                     <h1>{postTitle}</h1>
-                    <section className={'PostTemplate__details'}>
+                    <section className={'_details'}>
                         <PostDate date={post.frontmatter.date} hideIcon />
                     </section>
                 </PageHeader>

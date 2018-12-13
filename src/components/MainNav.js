@@ -22,9 +22,9 @@ const MainNav = ({ location }) => {
         <nav className="MainNav">
             {links.map(link => (
                 <Link
-                    className={`MainNav__link ${
+                    className={`_link ${
                         location.pathname === link.destination
-                            ? 'MainNav__link--current'
+                            ? '-current'
                             : ''
                     }`}
                     key={link.destination}

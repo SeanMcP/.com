@@ -5,9 +5,9 @@ import Responsive from './common/Responsive';
 const Footer = () => {
     return (
         <footer className="Footer">
-            <Responsive modifier="footer">
-                <p className="attribution">© Sean McPherson 2018</p>
-                <p className="sdg">(SDG)</p>
+            <Responsive className="_container">
+                <p className="_attribution">© Sean McPherson 2018</p>
+                <p className="_sdg">(SDG)</p>
             </Responsive>
         </footer>
     );

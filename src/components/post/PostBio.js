@@ -24,9 +24,9 @@ const socialLinks = [
 const PostBio = () => {
     const links = socialLinks.map(platform => {
         return (
-            <li className="PostBio__social-item" key={platform.name}>
-                <Icon className="PostBio__social-icon" icon={platform.icon} />
-                <a className="PostBio__social-link" href={platform.href}>
+            <li className="_social-item" key={platform.name}>
+                <Icon className="_social-icon" icon={platform.icon} />
+                <a className="_social-link" href={platform.href}>
                     {platform.name}
                 </a>
             </li>
@@ -34,15 +34,15 @@ const PostBio = () => {
     });
     return (
         <section className="PostBio">
-            <Thumbnail className={'PostBio__image'} />
-            <main className="PostBio__content">
+            <Thumbnail className={'_image'} />
+            <main className="_content">
                 <p>
                     My name is <strong>Sean McPherson</strong>, and I am a
                     software developer in Atlanta, GA. I write about web
                     development, JavaScript, React, and occassionally some other
                     things.
                 </p>
-                <ul className="PostBio__social-list">{links}</ul>
+                <ul className="_social-list">{links}</ul>
             </main>
         </section>
     );

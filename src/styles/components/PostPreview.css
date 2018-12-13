@@ -2,13 +2,13 @@
     margin-bottom: 2rem;
 }
 
-.PostPreview__header {
+.PostPreview ._header {
     align-items: center;
     display: flex;
     justify-content: space-between;
 }
 
-.PostPreview__title {
+.PostPreview ._title {
     margin-bottom: 0;
 }
 
@@ -17,13 +17,13 @@
         margin-bottom: 3rem;
     }
 
-    .PostPreview__header {
+    .PostPreview ._header {
         align-items: flex-start;
         flex-direction: column-reverse;
     }
 
     /* first- as opposed to last-child because the order has been reversed above */
-    .PostPreview__header > *:not(:first-child) {
+    .PostPreview ._header > *:not(:first-child) {
         margin: 0 0 1rem;
     }
 }

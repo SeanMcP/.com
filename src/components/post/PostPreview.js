@@ -8,17 +8,17 @@ import PostFooter from './PostFooter';
 const PostPreview = props => (
     <article
         className={`PostPreview ${
-            props.condensed ? 'PostPreview--condensed' : ''
+            props.condensed ? '-condensed' : ''
         }`}
     >
-        <header className="PostPreview__header">
-            <h3 className="PostPreview__title">
+        <header className="_header">
+            <h3 className="_title">
                 <Link to={`articles/${props.slug}`}>{props.title}</Link>
             </h3>
             <CategoryLink category={props.category} />
         </header>
         <p
-            className="PostPreview__content"
+            className="_content"
             dangerouslySetInnerHTML={{ __html: props.content }}
         />
         <PostFooter date={props.date} tags={props.tags} />
