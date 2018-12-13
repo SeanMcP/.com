@@ -9,7 +9,7 @@ import Thumbnail from './common/Thumbnail';
 const Header = props => {
     return (
         <header className="Header">
-            <Responsive className="_container">
+            <Responsive modifier="header">
                 <Link className="_logo-link" to={'/'}>
                     {props.title}
                 </Link>

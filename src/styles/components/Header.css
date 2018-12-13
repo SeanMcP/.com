@@ -1,5 +1,5 @@
 .Header {
-    box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
+    box-shadow: 0 0 1rem rgba(207, 199, 199, 0.125);
 }
 
 .Header ._logo-link {
@@ -7,7 +7,7 @@
     font-size: 125%;
 }
 
-.Header ._container {
+.Header .Responsive.-header {
     align-items: center;
     display: flex;
     justify-content: space-between;

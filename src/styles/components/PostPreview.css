@@ -1,4 +1,4 @@
-.PostPreview {
+.PostPreview:not(:last-of-type) {
     margin-bottom: 2rem;
 }
 
@@ -13,7 +13,7 @@
 }
 
 @media screen and (max-width: 800px) {
-    .PostPreview {
+    .PostPreview:not(:last-of-type) {
         margin-bottom: 3rem;
     }
 

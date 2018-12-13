@@ -2,7 +2,7 @@
     background: var(--gray100);
 }
 
-.Footer ._container {
+.Footer .Responsive.-footer {
     display: flex;
     justify-content: space-between;
     padding: 1rem 0;

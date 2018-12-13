@@ -1,10 +1,10 @@
 import React from 'react';
 
-const Responsive = ({ children, className }) => {
+const Responsive = ({ children, modifier }) => {
     return (
         <section
             className={`Responsive ${
-                className ? className : ''
+                modifier ? `-${modifier}` : ''
             }`}
         >
             {children}
