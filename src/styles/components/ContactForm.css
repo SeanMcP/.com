@@ -43,7 +43,7 @@
     padding: 0.5rem 1rem;
 }
 
-.ContactForm ._button + .ContactForm ._button {
+.ContactForm ._button + ._button {
     margin-left: 1rem;
 }
 
