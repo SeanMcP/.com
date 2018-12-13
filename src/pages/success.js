@@ -5,10 +5,13 @@ import get from 'lodash/get';
 
 import Layout from '../components/Layout';
 import PageHeader from '../components/common/PageHeader';
+import PostPreview from '../components/post/PostPreview';
 
 const SuccessPage = ({ data, location }) => {
     const siteTitle = get(data, 'site.siteMetadata.title');
     const siteDescription = get(data, 'site.siteMetadata.description');
+    const posts = get(data, 'allMarkdownRemark.edges');
+
     return (
         <Layout location={location} title={siteTitle}>
             <Helmet
@@ -20,6 +23,23 @@ const SuccessPage = ({ data, location }) => {
                 <h1>Success</h1>
             </PageHeader>
             <p>Thanks for reaching out! I'll get back to you as soon as possible.</p>
+            <hr />
+            <h2>Latest article</h2>
+            {posts.map(({ node }) => (
+                <PostPreview
+                    key={node.fields.slug}
+                    author={node.frontmatter.author}
+                    category={node.frontmatter.category}
+                    condensed
+                    content={node.frontmatter.summary || node.excerpt}
+                    date={node.frontmatter.date}
+                    slug={node.fields.slug}
+                    tags={node.frontmatter.tags}
+                    title={
+                        get(node, 'frontmatter.title') || node.fields.slug
+                    }
+                />
+            ))}
         </Layout>
     );
 };
@@ -32,6 +52,26 @@ export const pageQuery = graphql`
             siteMetadata {
                 title
                 description
+            }
+        }
+        allMarkdownRemark(
+            filter: { frontmatter: { published: { eq: true } } }
+            limit: 1
+        ) {
+            edges {
+                node {
+                    excerpt
+                    fields {
+                        slug
+                    }
+                    frontmatter {
+                        date(formatString: "MMMM D, YYYY")
+                        category
+                        summary
+                        tags
+                        title
+                    }
+                }
             }
         }
     }
