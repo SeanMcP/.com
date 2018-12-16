@@ -20,7 +20,7 @@ Ghost is a neat little publishing platform about which I have heard good reviews
 **~~Wordpress~~**
 
 Story time: when I was in high school, I started a web design and development company with a classmate. My partner quickly picked up Wordpress development and wanted to use it on all our projects. But try as I might, I couldn't figure Wordpress out. Feeling like a failure, I stuck to project management and design.
- 
+
 (That business partner is now a PhD student in California using machine-learning algorithms to identify bird calls. Pretty neat!)
 
 To this day, Wordpress remains a boogeyman for me. Even though it is a standard on the web, but I wasn't interested.

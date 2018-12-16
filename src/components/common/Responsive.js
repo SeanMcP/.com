@@ -1,15 +1,11 @@
-import React from 'react';
+import React from 'react'
 
 const Responsive = ({ children, modifier }) => {
-    return (
-        <section
-            className={`Responsive ${
-                modifier ? `-${modifier}` : ''
-            }`}
-        >
-            {children}
-        </section>
-    );
-};
+  return (
+    <section className={`Responsive ${modifier ? `-${modifier}` : ''}`}>
+      {children}
+    </section>
+  )
+}
 
-export default Responsive;
+export default Responsive

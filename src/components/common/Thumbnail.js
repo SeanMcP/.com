@@ -1,18 +1,18 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
 const Thumbnail = ({ className }) => {
-    return (
-        <img
-            alt={"An illustration of Sean McPherson's head"}
-            className={`Thumbnail ${className ? className : ''}`}
-            src={require('../../assets/seanmcp.png')}
-        />
-    );
-};
+  return (
+    <img
+      alt={"An illustration of Sean McPherson's head"}
+      className={`Thumbnail ${className ? className : ''}`}
+      src={require('../../assets/seanmcp.png')}
+    />
+  )
+}
 
 Thumbnail.propTypes = {
-    className: PropTypes.string
-};
+  className: PropTypes.string
+}
 
-export default Thumbnail;
+export default Thumbnail

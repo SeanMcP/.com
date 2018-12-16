@@ -1,45 +1,43 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import { Link } from 'gatsby';
+import React from 'react'
+import PropTypes from 'prop-types'
+import { Link } from 'gatsby'
 
 const links = [
-    {
-        destination: '/articles',
-        text: 'Articles'
-    },
-    {
-        destination: '/about',
-        text: 'About'
-    },
-    {
-        destination: '/contact',
-        text: 'Contact'
-    }
-];
+  {
+    destination: '/articles',
+    text: 'Articles'
+  },
+  {
+    destination: '/about',
+    text: 'About'
+  },
+  {
+    destination: '/contact',
+    text: 'Contact'
+  }
+]
 
 const MainNav = ({ location }) => {
-    return (
-        <nav className="MainNav">
-            {links.map(link => (
-                <Link
-                    className={`_link ${
-                        location.pathname === link.destination
-                            ? '-current'
-                            : ''
-                    }`}
-                    key={link.destination}
-                    tabIndex={0}
-                    to={link.destination}
-                >
-                    {link.text}
-                </Link>
-            ))}
-        </nav>
-    );
-};
+  return (
+    <nav className="MainNav">
+      {links.map(link => (
+        <Link
+          className={`_link ${
+            location.pathname === link.destination ? '-current' : ''
+          }`}
+          key={link.destination}
+          tabIndex={0}
+          to={link.destination}
+        >
+          {link.text}
+        </Link>
+      ))}
+    </nav>
+  )
+}
 
 MainNav.propTypes = {
-    location: PropTypes.object.isRequired
-};
+  location: PropTypes.object.isRequired
+}
 
-export default MainNav;
+export default MainNav

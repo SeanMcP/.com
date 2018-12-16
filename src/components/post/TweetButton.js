@@ -1,24 +1,24 @@
-import React from 'react';
-import PropTypes from 'prop-types';
+import React from 'react'
+import PropTypes from 'prop-types'
 
-import Icon from '../common/Icon';
+import Icon from '../common/Icon'
 
 const TweetButton = props => {
-    const tweet = `“${props.articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${
-        props.articleHref
-    }`;
-    const href = `https://twitter.com/intent/tweet?text=${tweet}`;
-    return (
-        <a className="TweetButton" href={href} target="_blank">
-            <Icon className={'_icon'} icon={'Twitter'} />
-            <span className="_text">Share</span>
-        </a>
-    );
-};
+  const tweet = `“${props.articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${
+    props.articleHref
+  }`
+  const href = `https://twitter.com/intent/tweet?text=${tweet}`
+  return (
+    <a className="TweetButton" href={href} target="_blank">
+      <Icon className={'_icon'} icon={'Twitter'} />
+      <span className="_text">Share</span>
+    </a>
+  )
+}
 
 TweetButton.propTypes = {
-    articleHref: PropTypes.string.isRequired,
-    articleTitle: PropTypes.string.isRequired
-};
+  articleHref: PropTypes.string.isRequired,
+  articleTitle: PropTypes.string.isRequired
+}
 
-export default TweetButton;
+export default TweetButton

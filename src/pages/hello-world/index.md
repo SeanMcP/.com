@@ -11,16 +11,16 @@ published: false
 // A comment
 
 function hello(name) {
-    return `Hello, I'm ${name}!`;
+  return `Hello, I'm ${name}!`
 }
 
 const obj = {
-    boolean: true,
-    function: hello,
-    number: 25,
-    regex: /ab+c/,
-    string: 'Sean'
-};
+  boolean: true,
+  function: hello,
+  number: 25,
+  regex: /ab+c/,
+  string: 'Sean'
+}
 ```
 
 This is my `first post` on my new fake blog! How exciting!
