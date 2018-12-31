@@ -39,7 +39,7 @@ const PostBio = () => {
         <p>
           My name is <strong>Sean McPherson</strong>, and I am a software
           developer in Atlanta, GA. I write about web development, JavaScript,
-          React, and occassionally some other things.
+          React, and occasionally some other things.
         </p>
         <ul className="_social-list">{links}</ul>
       </main>
