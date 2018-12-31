@@ -1,20 +1,31 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import '../styles/_index.css'
 import Header from './Header'
 import Responsive from './common/Responsive'
 import Footer from './Footer'
 
+const StyledContainer = styled.div`
+  display: flex;
+  flex-direction: column;
+  margin: 0;
+  min-height: 100vh;
+`
+
+const StyledResponsive = styled(Responsive)`
+  flex: 1;
+`
+
 class Layout extends React.Component {
   render() {
     const { location, title, children } = this.props
     return (
-      <div className="Layout">
+      <StyledContainer>
         <Header location={location} title={title} />
-        <Responsive modifier="layout">{children}</Responsive>
+        <StyledResponsive modifier="layout">{children}</StyledResponsive>
         <Footer />
-      </div>
+      </StyledContainer>
     )
   }
 }

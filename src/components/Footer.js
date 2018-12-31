@@ -8,6 +8,7 @@ import Responsive from './common/Responsive'
 const StyledFooter = styled.footer`
   background: ${THEME.BACKGROUND_SECONDARY};
   color: ${THEME.TEXT_SECONDARY};
+  margin-top: 2rem;
   padding: 1rem 0;
 
   p {
