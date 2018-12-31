@@ -1,15 +1,18 @@
 import React from 'react'
 import styled from 'styled-components'
 
+import THEME from '../../styles/theme'
+
 const StyledSection = styled.section`
-  align-items: ${props => props.alignItems ? props.alignItems : 'initial'};
-  display: ${props => props.flex || props.justifyContent || props.alignItems ? 'flex' : 'initial'};
-  justify-content: ${props => props.justifyContent ? props.justifyContent : 'initial'};
+  align-items: ${({ alignItems }) => alignItems ? alignItems : 'initial'};
+  display: ${({ alignItems, flex, justifyContent }) => flex || justifyContent || alignItems ? 'flex' : 'initial'};
+  justify-content: ${({ justifyContent }) => justifyContent ? justifyContent : 'initial'};
   margin-left: auto;
   margin-right: auto;
   width: 800px;
 
-  @media screen and (max-width: 832px) {
+  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+    flex-direction: column;
     margin-left: 1rem;
     margin-right: 1rem;
     width: initial;
