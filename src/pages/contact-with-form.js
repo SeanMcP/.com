@@ -3,6 +3,7 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
+import ContactForm from '../components/contact/ContactForm'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
 
@@ -33,6 +34,8 @@ const ContactPage = ({ data, location }) => {
         </a>
         .
       </p>
+      {/* <hr/> */}
+      <ContactForm />
     </Layout>
   )
 }
