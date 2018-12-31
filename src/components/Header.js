@@ -3,32 +3,37 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import THEME from '../styles/theme'
+
 import MainNav from './MainNav'
 import Responsive from './common/Responsive'
 
-const StyledContainer = styled.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
+const StyledHeader = styled.header`
+  box-shadow: 0 0 1rem rgba(207, 199, 199, 0.125);
   padding: 1rem 0;
+  margin-bottom: 2rem;
+`
 
-  @media screen and (max-width: 832px) {
-    flex-direction: column;
+const StyledLink = styled(Link)`
+  font-family: var(--display-font);
+  font-size: 125%;
+
+  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+    font-size: 150%;
+    margin-bottom: 1rem;
   }
 `
 
 const Header = props => {
   return (
-    <header className="Header">
-      <Responsive>
-        <StyledContainer>
-          <Link className="_logo-link" to={'/'}>
-            {props.title}
-          </Link>
-          <MainNav location={props.location} />
-        </StyledContainer>
+    <StyledHeader>
+      <Responsive alignItems="center" justifyContent="space-between">
+        <StyledLink to={'/'}>
+          {props.title}
+        </StyledLink>
+        <MainNav location={props.location} />
       </Responsive>
-    </header>
+    </StyledHeader>
   )
 }
 
