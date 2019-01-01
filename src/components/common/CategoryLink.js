@@ -1,19 +1,27 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { Folder } from 'react-feather'
+import styled from 'styled-components'
 
 import Icon from './Icon'
 import SearchLink from './SearchLink'
 
-const CategoryLink = ({ category, hideIcon, lede, modifier }) => {
+const StyledDiv = styled.div`
+  align-items: center;
+  display: flex;
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: 0.5rem;
+`
+
+const CategoryLink = ({ category, hideIcon }) => {
   return (
-    <div className={`CategoryLink ${modifier ? `-${modifier}` : ''}`}>
+    <StyledDiv>
       {!hideIcon && (
-        <Icon className={'_icon'} icon={'Folder'} />
-        // <Folder className={'_icon'} size={20} />
+        <StyledIcon icon={'Folder'} />
       )}
       <SearchLink queryKey={'categories'} queryValue={category} />
-    </div>
+    </StyledDiv>
   )
 }
 

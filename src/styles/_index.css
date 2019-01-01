@@ -22,7 +22,6 @@ body {
 @import './hr.css';
 
 /* Components */
-@import './components/CategoryLink.css';
 @import './components/ContactForm.css';
 @import './components/MainNav.css';
 @import './components/PageHeader.css';
@@ -33,7 +32,6 @@ body {
 @import './components/PostTemplate.css';
 @import './components/Responsive.css';
 @import './components/SearchHeader.css';
-@import './components/SearchLink.css';
 @import './components/TagLinks.css';
 @import './components/Thumbnail.css';
 @import './components/TweetButton.css';
