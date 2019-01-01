@@ -22,7 +22,6 @@ body {
 @import './hr.css';
 
 /* Components */
-@import './components/ArticleCategories.css';
 @import './components/CategoryLink.css';
 @import './components/ContactForm.css';
 @import './components/MainNav.css';
