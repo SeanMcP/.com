@@ -28,9 +28,7 @@ const Header = props => {
   return (
     <StyledHeader>
       <Responsive alignItems="center" justifyContent="space-between">
-        <StyledLink to={'/'}>
-          {props.title}
-        </StyledLink>
+        <StyledLink to={'/'}>{props.title}</StyledLink>
         <MainNav location={props.location} />
       </Responsive>
     </StyledHeader>

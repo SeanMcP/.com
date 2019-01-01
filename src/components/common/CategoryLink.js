@@ -17,9 +17,7 @@ const StyledIcon = styled(Icon)`
 const CategoryLink = ({ category, hideIcon }) => {
   return (
     <StyledDiv>
-      {!hideIcon && (
-        <StyledIcon icon={'Folder'} />
-      )}
+      {!hideIcon && <StyledIcon icon={'Folder'} />}
       <SearchLink queryKey={'categories'} queryValue={category} />
     </StyledDiv>
   )

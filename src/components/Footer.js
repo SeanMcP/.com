@@ -19,7 +19,7 @@ const StyledFooter = styled.footer`
 const Footer = () => {
   return (
     <StyledFooter>
-      <Responsive justifyContent="space-between" >
+      <Responsive justifyContent="space-between">
         <p className="_attribution">© Sean McPherson 2018</p>
         <p className="_sdg">(SDG)</p>
       </Responsive>

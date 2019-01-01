@@ -44,7 +44,7 @@ Looking forward to next year, there are several things that I want to learn and 
 - **Module bundlers**: I am lost (and confused) when it comes to module bundling, so I am going to de-mystify bundlers by publishing React **setup guides for Webpack, Parcel, and Rollup**
 - **NPM Packages**: I want to learn about creating and maintaining open-source software by publishing **two new packages**
 - **Tooling**: I want to investigate tooling options for React development that streamline the process and **create a personalized dot files repo**
-- **Publish more articles**: It is my mission to help people, and one way to do that is to publish  **24 articles (bi-monthly)**
+- **Publish more articles**: It is my mission to help people, and one way to do that is to publish **24 articles (bi-monthly)**
 - **Jr Devs Meetup**: I want to partner with a coding bootcamp to provide **instructors at every meeting**
 - **Speaking**: I want to create a deck and **present at another Meetup**
 - **Husband**: I want to take dating my wife seriously and **schedule a babysitter four times a year** for real dates
