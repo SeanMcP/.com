@@ -23,15 +23,10 @@ body {
 
 /* Components */
 @import './components/ContactForm.css';
-@import './components/MainNav.css';
-@import './components/PageHeader.css';
-@import './components/PostDate.css';
-@import './components/PostBio.css';
 @import './components/PostFooter.css';
 @import './components/PostPreview.css';
 @import './components/PostTemplate.css';
 @import './components/Responsive.css';
 @import './components/SearchHeader.css';
 @import './components/TagLinks.css';
-@import './components/Thumbnail.css';
 @import './components/TweetButton.css';

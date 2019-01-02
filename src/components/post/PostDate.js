@@ -1,14 +1,24 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import Icon from '../common/Icon'
 
-const PostDate = ({ className, date, hideIcon }) => {
+const StyledDiv = styled.div`
+  align-items: center;
+  display: flex;
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: 0.5rem;
+`
+
+const PostDate = ({ date, hideIcon }) => {
   return (
-    <div className={`PostDate ${className ? className : ''}`}>
-      {!hideIcon && <Icon className={'_icon'} icon={'Calendar'} />}
-      <time className="_date">{date}</time>
-    </div>
+    <StyledDiv>
+      {!hideIcon && <StyledIcon icon={'Calendar'} />}
+      <time>{date}</time>
+    </StyledDiv>
   )
 }
 

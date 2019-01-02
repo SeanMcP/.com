@@ -1,36 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled, { css } from 'styled-components'
 
 const links = [
   {
-    destination: '/articles',
+    destination: '/articles/',
     text: 'Articles'
   },
   {
-    destination: '/about',
+    destination: '/about/',
     text: 'About'
   },
   {
-    destination: '/contact',
+    destination: '/contact/',
     text: 'Contact'
   }
 ]
 
+const StyledLink = styled(({ isCurrent, ...props }) => <Link {...props} />)`
+  &:not(:last-of-type) {
+    margin-right: 1rem;
+  }
+
+  ${({ isCurrent }) =>
+    isCurrent &&
+    css`
+      text-decoration: underline;
+    `}
+`
+
 const MainNav = ({ location }) => {
   return (
-    <nav className="MainNav">
+    <nav>
       {links.map(link => (
-        <Link
-          className={`_link ${
-            location.pathname === link.destination ? '-current' : ''
-          }`}
+        <StyledLink
+          isCurrent={location.pathname === link.destination}
           key={link.destination}
           tabIndex={0}
           to={link.destination}
         >
           {link.text}
-        </Link>
+        </StyledLink>
       ))}
     </nav>
   )

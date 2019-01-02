@@ -1,18 +1,18 @@
 import React from 'react'
-import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
-const Thumbnail = ({ className }) => {
+const StyledImg = styled.img`
+  border-radius: 40rem;
+`
+
+const Thumbnail = props => {
   return (
-    <img
+    <StyledImg
       alt={"An illustration of Sean McPherson's head"}
-      className={`Thumbnail ${className ? className : ''}`}
       src={require('../../assets/seanmcp.png')}
+      {...props}
     />
   )
-}
-
-Thumbnail.propTypes = {
-  className: PropTypes.string
 }
 
 export default Thumbnail
