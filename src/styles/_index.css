@@ -23,7 +23,6 @@ body {
 
 /* Components */
 @import './components/ContactForm.css';
-@import './components/PostFooter.css';
 @import './components/PostPreview.css';
 @import './components/PostTemplate.css';
 @import './components/Responsive.css';
