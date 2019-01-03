@@ -59,8 +59,7 @@
     "format": "prettier --config .prettierrc --write 'src/**/*.js' 'src/**/*.md'",
     "develop": "gatsby develop",
     "start": "npm run develop",
-    "build": "gatsby build",
-    "deploy": "gatsby build && gh-pages -d public -b master"
+    "build": "gatsby build"
   },
   "husky": {
     "hooks": {
@@ -68,6 +67,9 @@
     }
   },
   "lint-staged": {
-    "*.{js,md}": ["prettier --config .prettierrc --write", "git add"]
+    "*.{js,md}": [
+      "prettier --config .prettierrc --write",
+      "git add"
+    ]
   }
 }
