@@ -33,10 +33,8 @@ const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
-const TweetButton = props => {
-  const tweet = `“${props.articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${
-    props.articleHref
-  }`
+const TweetButton = ({ articleHref, articleTitle }) => {
+  const tweet = `“${articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${articleHref}`
   const href = `https://twitter.com/intent/tweet?text=${tweet}`
   return (
     <StyledA href={href} target="_blank">
