@@ -1,23 +1,32 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 
 import SearchLink from './SearchLink'
 import Icon from '../common/Icon'
 
-const TagLinks = ({ hideIcon, modifier, tags }) => {
+const StyledDiv = styled.div`
+  align-items: center;
+  display: flex;
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: 0.5rem;
+`
+
+const TagLinks = ({ hideIcon, tags }) => {
   return (
-    <div className={`TagLinks ${modifier ? `-${modifier}` : ''}`}>
-      {!hideIcon && <Icon className={'_icon'} icon={'Tag'} />}
+    <StyledDiv>
+      {!hideIcon && <StyledIcon icon={'Tag'} />}
       {tags.map(tag => (
         <SearchLink key={tag} queryKey={'tags'} queryValue={tag} />
       ))}
-    </div>
+    </StyledDiv>
   )
 }
 
 TagLinks.propTypes = {
   hideIcon: PropTypes.bool,
-  modifier: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 
