@@ -1,15 +1,20 @@
 import React from 'react'
 import PropTypes from 'prop-types'
+import styled from 'styled-components'
 import capitalize from 'lodash/capitalize'
 
 import PageHeader from './PageHeader'
+
+const StyledH1 = styled.h1`
+  margin-top: 1rem;
+`
 
 const SearchHeader = ({ queryKey, queryValue }) => {
   const capValue = capitalize(queryValue)
   return (
     <PageHeader>
       <div className="SearchHeader">
-        <h1 className="_heading">{capValue}</h1>
+        <StyledH1>{capValue}</StyledH1>
         <p>
           All the articles {queryKey === 'Category' ? 'in' : 'with'} the “
           <strong>{capValue}</strong>” {queryKey.toLowerCase()}.
