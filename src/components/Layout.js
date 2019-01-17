@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { createGlobalStyle, ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components'
 
 import '../styles/_index.css'
 import { theme } from '../styles/theme'
@@ -15,15 +15,19 @@ const StyledContainer = styled.div`
   min-height: 100vh;
 `
 
+const StyledResponsive = styled(Responsive)`
+  flex: 1;
+`
+
 const Layout = ({ location, title, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledContainer>
         <Header location={location} title={title} />
         <GlobalStyle />
-        <Responsive modifier="layout">
+        <StyledResponsive>
           <main>{children}</main>
-        </Responsive>
+        </StyledResponsive>
         <Footer />
       </StyledContainer>
     </ThemeProvider>
