@@ -25,6 +25,5 @@ body {
 @import './components/ContactForm.css';
 @import './components/PostPreview.css';
 @import './components/PostTemplate.css';
-@import './components/Responsive.css';
 @import './components/SearchHeader.css';
 @import './components/TagLinks.css';

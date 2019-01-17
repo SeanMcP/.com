@@ -11,9 +11,9 @@
     --secondary-text: var(--primary-bg);
     --tertiary-text: var(--primary-bg);
 
-    --primary-color: var(--blue600);
+    --primary-color: var(--blue900);
     --secondary-color: var(--green600);
     
-    --primary-hover: var(--blue400);
+    --primary-hover: var(--blue800);
     --secondary-hover: var(--green400);
 }

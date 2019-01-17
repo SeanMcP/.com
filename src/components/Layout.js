@@ -13,21 +13,22 @@ const StyledContainer = styled.div`
   min-height: 100vh;
 `
 
-const StyledResponsive = styled(Responsive)`
+const StyledMain = styled.main`
   flex: 1;
 `
 
-class Layout extends React.Component {
-  render() {
-    const { location, title, children } = this.props
-    return (
-      <StyledContainer>
-        <Header location={location} title={title} />
-        <StyledResponsive modifier="layout">{children}</StyledResponsive>
-        <Footer />
-      </StyledContainer>
-    )
-  }
+const Layout = ({ location, title, children }) => {
+  return (
+    <StyledContainer>
+      <Header location={location} title={title} />
+      {/* <StyledMain> */}
+      <Responsive modifier="layout">
+        <main>{children}</main>
+      </Responsive>
+      {/* </StyledMain> */}
+      <Footer />
+    </StyledContainer>
+  )
 }
 
 export default Layout

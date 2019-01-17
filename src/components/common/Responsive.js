@@ -11,7 +11,8 @@ const StyledSection = styled.section`
     justifyContent ? justifyContent : 'initial'};
   margin-left: auto;
   margin-right: auto;
-  width: 800px;
+  max-width: 800px;
+  width: 100%;
 
   @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
     flex-direction: column;

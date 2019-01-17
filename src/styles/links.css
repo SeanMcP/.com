@@ -9,5 +9,5 @@ a:hover, a:active {
 }
 
 a:visited {
-    color: var(--blue800);
+    color: var(--primary-color);
 }
