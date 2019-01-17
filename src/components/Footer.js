@@ -1,14 +1,12 @@
 import React from 'react'
 import styled from 'styled-components'
 
-import THEME from '../styles/theme'
-
 import Responsive from './common/Responsive'
 
 const StyledFooter = styled.footer`
-  background: ${THEME.BACKGROUND_SECONDARY};
-  color: ${THEME.TEXT_SECONDARY};
-  margin-top: 2rem;
+  background: ${props => props.theme.primary_dark};
+  color: ${props => props.theme.secondary_light};
+  margin-top: 4rem;
   padding: 1rem 0;
 
   p {

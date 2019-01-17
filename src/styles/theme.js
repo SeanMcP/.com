@@ -8,3 +8,16 @@ export default {
   HOVER_PRIMARY: '#1565C0',
   SIZE_MOBILE: '832px'
 }
+
+export const theme = {
+  primary: '#42a5f5',
+  primary_dark: '#0077c2',
+  primary_light: '#80d6ff',
+  secondary: '#e0e0e0',
+  secondary_dark: '#aeaeae',
+  secondary_light: '#ffffff',
+  text: '#424242',
+  size_mobile: '832px',
+  font_body: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
+  font_mono: `Menlo, Monaco, "Roboto Sans", Consolas, "Andale Mono", "Ubuntu Mono", monospace`
+}

@@ -1,25 +1,27 @@
-/* External */
-@import url('https://fonts.googleapis.com/css?family=Fira+Sans:500');
-
 /* Global */
 @import './variables.css';
 @import './typography.css';
 @import './gatsby-prism.css';
 
 body {
-    background: var(--primary-bg);
-    color: var(--primary-text);
-    font-family: var(--system-fonts);
     font-size: 16px;
     margin: 0;
     -webkit-font-smoothing: antialiased;
-	-moz-osx-font-smoothing: grayscale;
+    -moz-osx-font-smoothing: grayscale;
 }
 
-/* Styles */
+hr {
+    border: 0;
+    height: 1px;
+    margin: 2rem 0;
+}
+
+hr.--short {
+    margin-top: 1rem;
+}
+
+/* Styles */    
 @import './headings.css';
-@import './links.css';
-@import './hr.css';
 
 /* Components */
 @import './components/ContactForm.css';
