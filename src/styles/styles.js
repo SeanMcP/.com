@@ -17,4 +17,8 @@ export default createGlobalStyle`
     hr {
         background: ${props => props.theme.secondary};
     }
+
+    *:focus {
+        outline-color: ${props => props.theme.primary};
+    }
 `
