@@ -23,6 +23,7 @@
     "gatsby-transformer-remark": "^2.1.6",
     "gatsby-transformer-sharp": "^2.1.3",
     "lodash": "^4.17.11",
+    "onkey-event-manager": "^0.0.0--prerelease.0",
     "prismjs": "^1.15.0",
     "prop-types": "^15.6.2",
     "react": "^16.5.1",
@@ -56,7 +57,7 @@
     "dev": "gatsby develop",
     "lint": "./node_modules/.bin/eslint --ext .js,.jsx --ignore-pattern public .",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "format": "prettier --config .prettierrc --write 'src/**/*.js' 'src/**/*.md'",
+    "format": "prettier --config .prettierrc --write 'src/**/*.{js,md}'",
     "develop": "gatsby develop",
     "start": "npm run develop",
     "build": "gatsby build"

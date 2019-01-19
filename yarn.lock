@@ -7584,6 +7584,10 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
+onkey-event-manager@^0.0.0--prerelease.0:
+  version "0.0.0--prerelease.0"
+  resolved "https://registry.yarnpkg.com/onkey-event-manager/-/onkey-event-manager-0.0.0--prerelease.0.tgz#cb8bd23d8f9deb91da215de7a108b0192d4cd599"
+
 opentracing@^0.14.3:
   version "0.14.3"
   resolved "https://registry.yarnpkg.com/opentracing/-/opentracing-0.14.3.tgz#23e3ad029fa66a653926adbe57e834469f8550aa"

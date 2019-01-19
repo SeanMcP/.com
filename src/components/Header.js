@@ -1,14 +1,17 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
+import Icon from './common/Icon'
 import MainNav from './MainNav'
+import Open from './common/Open'
 import Responsive from './common/Responsive'
 
 const StyledHeader = styled.header`
   box-shadow: 0 0 1rem ${props => props.theme.secondary};
   padding: 1rem 0;
+  position: relative;
   margin-bottom: 2rem;
 `
 
@@ -19,18 +22,65 @@ const StyledLink = styled(Link)`
 
   @media screen and (max-width: ${props => props.theme.size_mobile}) {
     font-size: 150%;
-    margin-bottom: 1rem;
   }
 `
 
+const StyledButton = styled.button`
+  align-items: center;
+  background: none;
+  border: none;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  margin-right: -0.5rem;
+
+  ${props =>
+    props.isOpen &&
+    css`
+      color: ${props.theme.primary_dark};
+    `}
+`
+
 const Header = props => {
+  const menuButton = React.createRef()
+  function focusMenuButton() {
+    menuButton.current.focus()
+  }
   return (
-    <StyledHeader>
-      <Responsive alignItems="center" justifyContent="space-between">
-        <StyledLink to={'/'}>{props.title}</StyledLink>
-        <MainNav location={props.location} />
-      </Responsive>
-    </StyledHeader>
+    <Open>
+      {openProps => (
+        <StyledHeader>
+          <Responsive
+            alignItems="center"
+            justifyContent="space-between"
+            overrideMobileColum
+          >
+            <StyledLink to={'/'}>{props.title}</StyledLink>
+            <StyledButton
+              aria-controls="MainNav"
+              aria-label={`${
+                openProps.isOpen ? 'Close' : 'Open'
+              } main navigation`}
+              aria-haspopup={true}
+              aria-expanded={openProps.isOpen}
+              onClick={openProps.toggle}
+              ref={menuButton}
+              isOpen={openProps.isOpen}
+            >
+              <Icon icon={'Menu'} />
+            </StyledButton>
+          </Responsive>
+          {openProps.isOpen && (
+            <MainNav
+              focusMenuButton={focusMenuButton}
+              id="MainNav"
+              location={props.location}
+              {...openProps}
+            />
+          )}
+        </StyledHeader>
+      )}
+    </Open>
   )
 }
 
