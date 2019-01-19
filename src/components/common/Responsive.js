@@ -1,5 +1,5 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled, { css } from 'styled-components'
 
 import THEME from '../../styles/theme'
 
@@ -15,7 +15,11 @@ const StyledSection = styled.section`
   width: 100%;
 
   @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
-    flex-direction: column;
+    ${({ overrideMobileColum }) =>
+      !overrideMobileColum &&
+      css`
+        flex-direction: column;
+      `};
     margin-left: 1rem;
     margin-right: 1rem;
     width: initial;
