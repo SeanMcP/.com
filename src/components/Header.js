@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled, { css } from 'styled-components'
+import { KEY, onKey } from 'onkey-event-manager'
 
 import Icon from './common/Icon'
 import MainNav from './MainNav'
@@ -64,6 +65,9 @@ const Header = props => {
               aria-haspopup={true}
               aria-expanded={openProps.isOpen}
               onClick={openProps.toggle}
+              onKeyDown={onKey({
+                [KEY.ArrowDown]: openProps.open
+              })}
               ref={menuButton}
               isOpen={openProps.isOpen}
             >
