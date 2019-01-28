@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import { Introduction } from '../components/text/Text'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/PostPreview'
+import CondensedPostPreview from '../components/post/CondensedPostPreview'
 
 class BlogIndex extends React.Component {
   render() {
@@ -31,16 +31,13 @@ class BlogIndex extends React.Component {
         <h2>Recent articles</h2>
         <hr className="--short" />
         {posts.map(({ node }) => (
-          <PostPreview
+          <CondensedPostPreview
             key={node.fields.slug}
-            author={node.frontmatter.author}
             category={node.frontmatter.category}
-            condensed
-            content={node.frontmatter.summary || node.excerpt}
             date={node.frontmatter.date}
             slug={node.fields.slug}
-            tags={node.frontmatter.tags}
             title={get(node, 'frontmatter.title') || node.fields.slug}
+            time={node.timeToRead}
           />
         ))}
       </Layout>
@@ -69,6 +66,7 @@ export const pageQuery = graphql`
           fields {
             slug
           }
+          timeToRead
           frontmatter {
             date(formatString: "MMMM D, YYYY")
             category
