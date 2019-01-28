@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import { Introduction } from '../components/text/Text'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import CondensedPostPreview from '../components/post/CondensedPostPreview'
+import PostPreview from '../components/post/PostPreview'
 
 class BlogIndex extends React.Component {
   render() {
@@ -31,7 +31,7 @@ class BlogIndex extends React.Component {
         <h2>Recent articles</h2>
         <hr className="--short" />
         {posts.map(({ node }) => (
-          <CondensedPostPreview
+          <PostPreview
             key={node.fields.slug}
             category={node.frontmatter.category}
             date={node.frontmatter.date}

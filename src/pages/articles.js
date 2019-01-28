@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import ArticleCategories from '../components/common/ArticleCategories'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import CondensedPostPreview from '../components/post/CondensedPostPreview'
+import PostPreview from '../components/post/PostPreview'
 
 const Articles = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -26,7 +26,7 @@ const Articles = props => {
         {categories && <ArticleCategories list={categories} />}
       </PageHeader>
       {posts.map(({ node }) => (
-        <CondensedPostPreview
+        <PostPreview
           key={node.fields.slug}
           category={node.frontmatter.category}
           date={node.frontmatter.date}

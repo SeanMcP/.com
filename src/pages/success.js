@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import CondensedPostPreview from '../components/post/CondensedPostPreview'
+import PostPreview from '../components/post/PostPreview'
 
 const SuccessPage = ({ data, location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
@@ -29,7 +29,7 @@ const SuccessPage = ({ data, location }) => {
       <h2>Latest article</h2>
       <hr />
       {posts.map(({ node }) => (
-        <CondensedPostPreview
+        <PostPreview
           key={node.fields.slug}
           category={node.frontmatter.category}
           date={node.frontmatter.date}

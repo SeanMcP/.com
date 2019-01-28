@@ -1,32 +1,47 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
+import styled from 'styled-components'
 
 import CategoryLink from '../common/CategoryLink'
-import PostFooter from './PostFooter'
+import PostDate from './PostDate'
+import PostTime from './PostTime'
+
+const StyledArticle = styled.article`
+  h3 {
+    margin-bottom: 0.5rem;
+  }
+
+  :not(:last-of-type) {
+    margin-bottom: 2rem;
+  }
+`
+
+const StyledDiv = styled.div`
+  > div {
+    display: inline;
+  }
+`
 
 const PostPreview = props => (
-  <article className={`PostPreview ${props.condensed ? '-condensed' : ''}`}>
-    <header className="_header">
-      <h3 className="_title">
-        <Link to={`articles/${props.slug}`}>{props.title}</Link>
-      </h3>
-      <CategoryLink category={props.category} />
-    </header>
-    <p
-      className="_content"
-      dangerouslySetInnerHTML={{ __html: props.content }}
-    />
-    <PostFooter date={props.date} tags={props.tags} />
-  </article>
+  <StyledArticle>
+    <h3>
+      <Link to={props.slug}>{props.title}</Link>
+    </h3>
+    <StyledDiv>
+      <PostDate date={props.date} hideIcon /> |{' '}
+      <PostTime time={props.time} hideIcon /> |{' '}
+      <CategoryLink category={props.category} hideIcon />
+    </StyledDiv>
+    {props.summary && <p>{props.summary}</p>}
+  </StyledArticle>
 )
 
 PostPreview.propTypes = {
-  author: PropTypes.string,
-  condensed: PropTypes.bool,
-  content: PropTypes.string.isRequired,
   date: PropTypes.string.isRequired,
+  category: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
+  time: PropTypes.number.isRequired,
   title: PropTypes.string.isRequired
 }
 

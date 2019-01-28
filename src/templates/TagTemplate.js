@@ -18,12 +18,10 @@ const TagTemplate = props => {
       {posts.map(({ node }) => (
         <PostPreview
           key={node.fields.slug}
-          author={node.frontmatter.author}
           category={node.frontmatter.category}
-          content={node.excerpt}
           date={node.frontmatter.date}
           slug={node.fields.slug}
-          tags={node.frontmatter.tags}
+          summary={node.frontmatter.summary}
           time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
