@@ -6,7 +6,7 @@ import Helmet from 'react-helmet'
 import ArticleCategories from '../components/common/ArticleCategories'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/PostPreview'
+import CondensedPostPreview from '../components/post/CondensedPostPreview'
 
 const Articles = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -26,14 +26,13 @@ const Articles = props => {
         {categories && <ArticleCategories list={categories} />}
       </PageHeader>
       {posts.map(({ node }) => (
-        <PostPreview
-          author={node.frontmatter.author}
+        <CondensedPostPreview
           key={node.fields.slug}
           category={node.frontmatter.category}
-          content={node.excerpt}
           date={node.frontmatter.date}
           slug={node.fields.slug}
-          tags={node.frontmatter.tags}
+          summary={node.frontmatter.summary}
+          time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
       ))}
@@ -68,6 +67,7 @@ export const pageQuery = graphql`
             tags
             title
           }
+          timeToRead
         }
       }
       group(field: frontmatter___category) {

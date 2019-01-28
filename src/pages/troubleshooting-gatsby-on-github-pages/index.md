@@ -1,6 +1,6 @@
 ---
 title: Troubleshooting Gatsby on GitHub Pages
-summary: false
+summary:
 date: '2018-12-04T07:00:00.000Z'
 category: development
 tags: ['blogging', 'devops', 'gatsby', 'github']

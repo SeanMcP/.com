@@ -24,6 +24,7 @@ const TagTemplate = props => {
           date={node.frontmatter.date}
           slug={node.fields.slug}
           tags={node.frontmatter.tags}
+          time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
       ))}
@@ -59,6 +60,7 @@ export const pageQuery = graphql`
             tags
             title
           }
+          timeToRead
         }
       }
     }

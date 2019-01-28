@@ -5,6 +5,7 @@ import styled from 'styled-components'
 
 import CategoryLink from '../common/CategoryLink'
 import PostDate from './PostDate'
+import PostTime from './PostTime'
 
 const StyledArticle = styled.article`
   h3 {
@@ -28,9 +29,11 @@ const PostPreview = props => (
       <Link to={`articles/${props.slug}`}>{props.title}</Link>
     </h3>
     <StyledDiv>
-      <PostDate date={props.date} hideIcon /> | {`${props.time} min read`} |{' '}
+      <PostDate date={props.date} hideIcon /> |{' '}
+      <PostTime time={props.time} hideIcon /> |{' '}
       <CategoryLink category={props.category} hideIcon />
     </StyledDiv>
+    {props.summary && <p>{props.summary}</p>}
   </StyledArticle>
 )
 

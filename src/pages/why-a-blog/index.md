@@ -1,6 +1,6 @@
 ---
 title: Why a blog?
-summary: false
+summary: An effort to preserve my content on the ever-changing web
 date: '2018-12-04T07:00:00.000Z'
 category: meta
 tags: ['blogging', 'medium']

@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
 import Layout from '../components/Layout'
-import PostPreview from '../components/post/PostPreview'
+import CondensedPostPreview from '../components/post/CondensedPostPreview'
 import SearchHeader from '../components/common/SearchHeader'
 
 const CategoryTemplate = props => {
@@ -16,14 +16,13 @@ const CategoryTemplate = props => {
       <Helmet title={`Categories | ${siteTitle}`} />
       <SearchHeader queryKey={'Category'} queryValue={category} />
       {posts.map(({ node }) => (
-        <PostPreview
+        <CondensedPostPreview
           key={node.fields.slug}
-          author={node.frontmatter.author}
           category={node.frontmatter.category}
-          content={node.excerpt}
+          summary={node.frontmatter.summary}
           date={node.frontmatter.date}
           slug={node.fields.slug}
-          tags={node.frontmatter.tags}
+          time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
       ))}
@@ -61,6 +60,7 @@ export const pageQuery = graphql`
             tags
             title
           }
+          timeToRead
         }
       }
     }

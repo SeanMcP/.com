@@ -1,6 +1,6 @@
 ---
 title: Why Gatsby?
-summary: false
+summary:
 date: '2018-12-04T12:12:03.284Z'
 category: meta
 tags: [blogging, gatsby]

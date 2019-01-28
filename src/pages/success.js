@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/PostPreview'
+import CondensedPostPreview from '../components/post/CondensedPostPreview'
 
 const SuccessPage = ({ data, location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
@@ -29,15 +29,14 @@ const SuccessPage = ({ data, location }) => {
       <h2>Latest article</h2>
       <hr />
       {posts.map(({ node }) => (
-        <PostPreview
+        <CondensedPostPreview
           key={node.fields.slug}
-          author={node.frontmatter.author}
           category={node.frontmatter.category}
-          condensed
-          content={node.frontmatter.summary || node.excerpt}
           date={node.frontmatter.date}
           slug={node.fields.slug}
+          summary={node.frontmatter.summary}
           tags={node.frontmatter.tags}
+          time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
       ))}
@@ -72,6 +71,7 @@ export const pageQuery = graphql`
             tags
             title
           }
+          timeToRead
         }
       }
     }

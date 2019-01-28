@@ -1,13 +1,22 @@
 import React from 'react'
 import { graphql } from 'gatsby'
+import styled from 'styled-components'
 import get from 'lodash/get'
 
+import CategoryLink from '../components/common/CategoryLink'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
 import PostBio from '../components/post/PostBio'
 import PostDate from '../components/post/PostDate'
 import PostFooter from '../components/post/PostFooter'
 import PostHelmet from '../components/post/PostHelmet'
+import PostTime from '../components/post/PostTime'
+
+const StyledDiv = styled.div`
+  > * {
+    display: inline;
+  }
+`
 
 const PostTemplate = props => {
   const { location } = props
@@ -26,18 +35,17 @@ const PostTemplate = props => {
       <article className="PostTemplate">
         <PageHeader centered>
           <h1>{postTitle}</h1>
-          <section className={'_details'}>
-            <PostDate date={post.frontmatter.date} hideIcon />
-          </section>
+          <StyledDiv>
+            <PostDate date={post.frontmatter.date} hideIcon /> |{' '}
+            <PostTime time={post.timeToRead} hideIcon /> |{' '}
+            <CategoryLink category={post.frontmatter.category} hideIcon />
+          </StyledDiv>
         </PageHeader>
         <main dangerouslySetInnerHTML={{ __html: post.html }} />
         <hr />
         <PostFooter
           articleHref={location.href}
           articleTitle={post.frontmatter.title}
-          category={post.frontmatter.category}
-          date={post.frontmatter.date}
-          modifier={'post-template'}
           tags={post.frontmatter.tags}
         />
         <hr />
@@ -68,6 +76,7 @@ export const pageQuery = graphql`
         tags
         title
       }
+      timeToRead
     }
   }
 `

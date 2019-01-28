@@ -75,7 +75,7 @@ const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
-const StyledMain = styled.main`
+const StyledDiv = styled.div`
   > *:first-child {
     margin-top: 0;
   }
@@ -96,14 +96,14 @@ const PostBio = () => {
   return (
     <StyledSection>
       <StyledThumbnail />
-      <StyledMain>
+      <StyledDiv>
         <p>
           My name is <strong>Sean McPherson</strong>, and I am a software
           developer in Atlanta, GA. I write about web development, JavaScript,
           React, and occasionally some other things.
         </p>
         <StyledUl>{links}</StyledUl>
-      </StyledMain>
+      </StyledDiv>
     </StyledSection>
   )
 }

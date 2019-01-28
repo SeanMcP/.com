@@ -27,10 +27,8 @@ const StyledFooter = styled.footer`
   }
 `
 
-const PostFooter = ({ articleHref, articleTitle, category, date, tags }) => (
+const PostFooter = ({ articleHref, articleTitle, tags }) => (
   <StyledFooter>
-    {date && <PostDate date={date} />}
-    {category && <CategoryLink category={category} />}
     <TagLinks tags={tags} />
     {articleHref && articleTitle && (
       <TweetButton articleHref={articleHref} articleTitle={articleTitle} />
@@ -41,8 +39,6 @@ const PostFooter = ({ articleHref, articleTitle, category, date, tags }) => (
 PostFooter.propTypes = {
   articleHref: PropTypes.string,
   articleTitle: PropTypes.string,
-  category: PropTypes.string,
-  date: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string).isRequired
 }
 

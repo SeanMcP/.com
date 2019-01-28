@@ -1,6 +1,6 @@
 ---
 title: 2018 into 2019
-summary: false
+summary: Reflecting on last year while looking forward to next
 date: '2018-12-31T22:40:32.169Z'
 category: general
 tags: [year-in-review, personal, professional]

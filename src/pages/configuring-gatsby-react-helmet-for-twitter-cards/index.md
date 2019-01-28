@@ -1,6 +1,6 @@
 ---
 title: Configuring Gatsby, React Helmet for Twitter Cards
-summary: false
+summary:
 date: '2019-01-01T22:40:32.169Z'
 category: Development
 tags: [react, gatsby, react-helmet]

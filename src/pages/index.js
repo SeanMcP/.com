@@ -36,6 +36,7 @@ class BlogIndex extends React.Component {
             category={node.frontmatter.category}
             date={node.frontmatter.date}
             slug={node.fields.slug}
+            summary={node.frontmatter.summary}
             title={get(node, 'frontmatter.title') || node.fields.slug}
             time={node.timeToRead}
           />
