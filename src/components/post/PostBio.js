@@ -4,8 +4,6 @@ import styled from 'styled-components'
 import Icon from '../common/Icon'
 import Thumbnail from '../common/Thumbnail'
 
-import THEME from '../../styles/theme'
-
 const socialLinks = [
   {
     href: 'https://github.com/seanmcp',
@@ -27,7 +25,7 @@ const socialLinks = [
 const StyledSection = styled.section`
   display: flex;
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+  @media screen and (max-width: ${props => props.theme.size_mobile}) {
     flex-direction: column;
   }
 `
@@ -36,7 +34,7 @@ const StyledThumbnail = styled(Thumbnail)`
   height: 5rem;
   margin-right: 1rem;
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+  @media screen and (max-width: ${props => props.theme.size_mobile}) {
     height: initial;
     margin: 0 auto 1rem;
     width: 8rem;
@@ -49,7 +47,7 @@ const StyledUl = styled.ul`
   list-style-type: none;
   padding: 0;
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+  @media screen and (max-width: ${props => props.theme.size_mobile}) {
     align-items: flex-start;
     flex-direction: column;
   }
@@ -64,7 +62,7 @@ const StyledLi = styled.li`
     margin-right: 2rem;
   }
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+  @media screen and (max-width: ${props => props.theme.size_mobile}) {
     &:not(:last-child) {
       margin: 0 0 1rem;
     }

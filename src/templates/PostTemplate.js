@@ -41,7 +41,10 @@ const PostTemplate = props => {
             <CategoryLink category={post.frontmatter.category} hideIcon />
           </StyledDiv>
         </PageHeader>
-        <main dangerouslySetInnerHTML={{ __html: post.html }} />
+        <div
+          className="typography"
+          dangerouslySetInnerHTML={{ __html: post.html }}
+        />
         <hr />
         <PostFooter
           articleHref={location.href}
