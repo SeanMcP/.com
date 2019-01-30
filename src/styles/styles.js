@@ -11,7 +11,6 @@ export default createGlobalStyle`
     body {
         background: ${props => props.theme.secondary_light};
         color: ${props => props.theme.text};
-        font-family: ${props => props.theme.font_body};
     }
 
     hr {
