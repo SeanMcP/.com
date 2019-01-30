@@ -10,10 +10,9 @@ import Open from './common/Open'
 import Responsive from './common/Responsive'
 
 const StyledHeader = styled.header`
-  box-shadow: 0 0 1rem ${props => props.theme.secondary};
+  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
   padding: 1rem 0;
   position: relative;
-  margin-bottom: 2rem;
 `
 
 const StyledLink = styled(Link)`

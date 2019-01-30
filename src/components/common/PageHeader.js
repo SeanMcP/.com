@@ -8,8 +8,9 @@ const StyledDiv = styled.div`
     css`
       text-align: center;
     `}
+  margin-top: 1rem;
 
-  >*:first-child {
+  > *:first-child {
     margin-top: 0;
   }
 `

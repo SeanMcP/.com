@@ -4,6 +4,7 @@ import styled, { ThemeProvider } from 'styled-components'
 import '../styles/_index.css'
 import { theme } from '../styles/theme'
 import GlobalStyle from '../styles/styles'
+import Billboard from './Billboard'
 import Header from './Header'
 import Responsive from './common/Responsive'
 import Footer from './Footer'
@@ -17,14 +18,17 @@ const StyledContainer = styled.div`
 
 const StyledResponsive = styled(Responsive)`
   flex: 1;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
 `
 
 const Layout = ({ location, title, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledContainer>
-        <Header location={location} title={title} />
         <GlobalStyle />
+        <Header location={location} title={title} />
+        <Billboard isRoot={location.pathname === '/'} />
         <StyledResponsive>
           <main>{children}</main>
         </StyledResponsive>

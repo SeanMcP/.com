@@ -18,6 +18,7 @@ const StyledArticle = styled.article`
 `
 
 const StyledDiv = styled.div`
+  font-size: 0.8rem;
   > div {
     display: inline;
   }

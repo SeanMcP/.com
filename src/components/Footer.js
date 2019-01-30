@@ -6,7 +6,7 @@ import Responsive from './common/Responsive'
 const StyledFooter = styled.footer`
   background: ${props => props.theme.primary_dark};
   color: ${props => props.theme.secondary_light};
-  margin-top: 3rem;
+  font-size: 0.8rem;
   padding: 1rem 0;
 
   p {
