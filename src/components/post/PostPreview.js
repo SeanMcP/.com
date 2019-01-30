@@ -24,6 +24,10 @@ const StyledDiv = styled.div`
   }
 `
 
+const StyledP = styled.p`
+  margin-top: 0.5rem;
+`
+
 const PostPreview = props => (
   <StyledArticle>
     <h3>
@@ -34,7 +38,7 @@ const PostPreview = props => (
       <PostTime time={props.time} hideIcon /> |{' '}
       <CategoryLink category={props.category} hideIcon />
     </StyledDiv>
-    {props.summary && <p>{props.summary}</p>}
+    {props.summary && <StyledP>{props.summary}</StyledP>}
   </StyledArticle>
 )
 

@@ -24,6 +24,7 @@ const socialLinks = [
 
 const StyledSection = styled.section`
   display: flex;
+  margin-bottom: 1rem;
 
   @media screen and (max-width: ${props => props.theme.size_mobile}) {
     flex-direction: column;

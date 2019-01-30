@@ -13,6 +13,7 @@ import PostHelmet from '../components/post/PostHelmet'
 import PostTime from '../components/post/PostTime'
 
 const StyledDiv = styled.div`
+  font-size: 0.8rem;
   > * {
     display: inline;
   }
