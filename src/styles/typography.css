@@ -9,3 +9,19 @@ p {
 .typography li:not(:last-of-type) {
     margin-bottom: 0.5rem;
 }
+
+.typography blockquote {
+    background: rgba(0, 0, 0, 0.025);
+    border-left: 4px solid rgba(0, 0, 0, 0.5);
+    font-style: italic;
+    margin: 1rem 0;
+    padding: 1rem;
+}
+
+.typography blockquote > *:first-child {
+    margin-top: 0;
+}
+
+.typography blockquote > *:last-child {
+    margin-bottom: 0;
+}
