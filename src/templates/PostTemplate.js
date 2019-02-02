@@ -12,8 +12,9 @@ import PostFooter from '../components/post/PostFooter'
 import PostHelmet from '../components/post/PostHelmet'
 import PostTime from '../components/post/PostTime'
 
+import PostStyles from '../styles/components/PostTemplate.styles'
+
 const StyledDiv = styled.div`
-  font-size: 0.8rem;
   > * {
     display: inline;
   }
@@ -28,6 +29,7 @@ const PostTemplate = props => {
 
   return (
     <Layout location={location} title={siteTitle}>
+      <PostStyles />
       <PostHelmet
         postDescription={postDescription}
         postTitle={postTitle}

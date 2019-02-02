@@ -4,9 +4,10 @@
 @import './typography.css';
 @import './gatsby-prism.css';
 
-html {
+/* 20px just felt too big */
+/* html {
     font-size: 20px;
-}
+} */
 
 body {
     font-family: var(--system-fonts);
