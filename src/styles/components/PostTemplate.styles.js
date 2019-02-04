@@ -11,7 +11,8 @@ export default createGlobalStyle`
 
 .typography blockquote {
     background: rgba(0, 0, 0, 0.025);
-    border-left: 8px solid ${p => p.theme.primary};
+    border-left: 0.5rem solid ${p => p.theme.primary};
+    border-radius: 0.5rem;
     font-style: italic;
     margin: 1rem 0;
     padding: 1rem;
