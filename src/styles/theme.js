@@ -6,7 +6,7 @@ export default {
   TEXT_SECONDARY: '#FAFAFA',
   COLOR_PRIMARY: '#0D47A1',
   HOVER_PRIMARY: '#1565C0',
-  SIZE_MOBILE: '832px'
+  SIZE_MOBILE: '672px'
 }
 
 export const theme = {
@@ -23,7 +23,7 @@ export const theme = {
   accent_light: '#ffd740',
   accent_dark: '#ffab00',
   text: '#424242',
-  size_mobile: '832px',
+  size_mobile: '672px',
   font_body: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
   font_mono: `Menlo, Monaco, "Roboto Sans", Consolas, "Andale Mono", "Ubuntu Mono", monospace`
 }

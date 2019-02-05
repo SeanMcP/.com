@@ -11,7 +11,7 @@ const StyledSection = styled.section`
     justifyContent ? justifyContent : 'initial'};
   margin-left: auto;
   margin-right: auto;
-  max-width: 800px;
+  max-width: 40rem;
   width: 100%;
 
   @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
