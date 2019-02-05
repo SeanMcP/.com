@@ -2,7 +2,8 @@
 
 :root {
     --system-fonts: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
-    --display-font: Lato, var(--system-fonts);
+    --body-font: 'Inter', var(--system-fonts);
+    --display-font: var(--body-font);
     --mono-font: Menlo, Monaco, "Roboto Sans", Consolas,
         "Andale Mono", "Ubuntu Mono", monospace;
 }

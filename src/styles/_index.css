@@ -1,5 +1,5 @@
 /* Global */
-@import url('https://fonts.googleapis.com/css?family=Lato:300,900');
+@import './inter/inter.css';
 @import './variables.css';
 @import './typography.css';
 @import './gatsby-prism.css';
@@ -10,7 +10,7 @@
 } */
 
 body {
-    font-family: var(--system-fonts);
+    font-family: var(--body-font);
     margin: 0;
     -webkit-font-smoothing: antialiased;
     -moz-osx-font-smoothing: grayscale;
