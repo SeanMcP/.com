@@ -33,4 +33,8 @@ export default createGlobalStyle`
 .gatsby-resp-image-wrapper {
     max-width: initial !important;
 }
+
+.footnotes li > * {
+    display: inline;
+}
 `
