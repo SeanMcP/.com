@@ -6,6 +6,7 @@ import Helmet from 'react-helmet'
 import { Introduction } from '../components/text/Text'
 import Layout from '../components/Layout'
 import PostPreview from '../components/post/PostPreview'
+import Projects from '../components/home/Projects'
 
 const BlogIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -20,6 +21,7 @@ const BlogIndex = props => {
         title={siteTitle}
       />
       <Introduction />
+      <Projects />
       <h2>Recent articles</h2>
       <hr className="--short" />
       {posts.map(({ node }) => (

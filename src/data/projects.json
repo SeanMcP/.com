@@ -1,0 +1,22 @@
+{
+    "Apps": [{
+        "name": "Sushi Go Friend",
+        "repo": "seanmcp/sushi-go-friend",
+        "live": "https://sushigofriend.netlify.com",
+        "description": "A companion app for Sushi Go!",
+        "tech": ["react"]
+    }],
+    "Packages": [{
+            "name": "A11y React Emoji",
+            "repo": "seanmcp/a11y-react-emoji",
+            "description": "An accessible Emoji component for React applications",
+            "tech": ["react"]
+        },
+        {
+            "name": "onKey Event Manager",
+            "repo": "seanmcp/onkey-event-manager",
+            "description": "Easily map onKey functions to keyboard events",
+            "tech": ["javascript"]
+        }
+    ]
+}
