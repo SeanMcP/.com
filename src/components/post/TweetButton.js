@@ -34,7 +34,7 @@ const StyledIcon = styled(Icon)`
 `
 
 const TweetButton = ({ articleHref, articleTitle }) => {
-  const tweet = `“${articleTitle}” by Sean McPherson (@_seanmcp)  ̶ ${articleHref}`
+  const tweet = `“${articleTitle}” by @_seanmcp  ̶ ${articleHref}`
   const href = `https://twitter.com/intent/tweet?text=${tweet}`
   return (
     <StyledA href={href} target="_blank">
