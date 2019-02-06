@@ -14,12 +14,14 @@ export default createGlobalStyle`
     border-left: 0.5rem solid ${p => p.theme.primary};
     border-radius: 0.5rem;
     font-style: italic;
+    font-size: 1.25rem;
+    font-weight: 500;
     margin: 1rem 0;
     padding: 1rem;
 }
 
 .typography blockquote > * {
-    line-height: 125%;
+    line-height: 150%;
 }
 
 .typography blockquote > *:first-child {
