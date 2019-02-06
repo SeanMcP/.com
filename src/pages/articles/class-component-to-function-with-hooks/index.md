@@ -8,7 +8,7 @@ tags: [react, hooks]
 published: false
 ---
 
-Last year, the React team announced hooks, an upcoming feature to more easily abstract logic into reusable components. On the day of the announcement, [I wrote and article](https://medium.com/@seanmcp/refactoring-a-render-prop-with-hooks-fc22ed537199) explaining how to refactor a render prop component with hook.
+Last year, the React team announced hooks, an upcoming feature to more easily abstract logic into reusable components On the day of the announcement, [I wrote and article](https://medium.com/@seanmcp/refactoring-a-render-prop-with-hooks-fc22ed537199) explaining how to refactor a render prop component with hook. Starting this week, following the stable release of [React v16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html), you can now add hooks in your projects!
 
 Today, I want to look at a typical class component and demonstrate how hooks can simplify your code by converting it into a functional component. Let's jump in.
 
@@ -116,7 +116,7 @@ const FunctionalComponent = props => {
 }
 ```
 
-### `useEffect`
+### useEffect
 
 In our class component, we make an AJAX request when the component mounted and stored that data in state. `componentDidMount` and the other lifecycle methods were limited to classes. However, React solved that problem too with the `useEffect` hook.
 
@@ -149,7 +149,7 @@ If you are coding along, you should see the following in the console when your c
 
 This shows us that our API call is working, but logging the response isn't our goal; we need to store the data for later. Let's revisit the `url` variable that we created.
 
-### `useState`
+### useState
 
 Now that we have the response from our API, we need to be able to store and reference that value. In our class component, we used its state and the `setState` method to remember that data.
 
