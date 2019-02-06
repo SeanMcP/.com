@@ -11,10 +11,9 @@ const StyledSection = styled.section`
   color: white;
   display: flex;
   flex-direction: column;
-  height: 600px;
   justify-content: center;
   max-height: 100vh;
-  padding: 0 1rem;
+  padding: 5rem 1rem;
   text-align: center;
 
   p {
@@ -29,7 +28,10 @@ const Billboard = ({ isRoot }) => {
   return (
     <StyledSection>
       <h1>Sean McP</h1>
-      <p>Software developer</p>
+      <p>
+        Christian, husband, father, dog owner, soccer fan,{' '}
+        <strong>software developer</strong>
+      </p>
     </StyledSection>
   )
 }

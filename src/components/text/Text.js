@@ -226,11 +226,11 @@ export const LifeStory = () => (
 export const Introduction = () => (
   <React.Fragment>
     <p>
-      My name is <strong>Sean McPherson</strong>, and I am a software developer,
-      educator, and learner. I work as a UI/UX Developer with React for{' '}
-      <A to="https://www.tsys.com/about-us/">TSYS</A> in Atlanta, GA. I also
-      organize <A to="https://meetup.com/jrdevatl">Jr Devs</A>, a community for
-      junior developers.
+      My name is <strong>Sean McPherson</strong>, and I am a software developer
+      for <A to="https://www.tsys.com/about-us/">TSYS</A> in Atlanta, GA. I
+      mostly work in JavaScript, React, and (sometimes) Python. I also organize{' '}
+      <A to="https://meetup.com/jrdevatl">Jr Devs</A>, a community for junior
+      developers.
     </p>
     <p>
       Outside of work, I enjoy spending time with my family (wife, son, and
