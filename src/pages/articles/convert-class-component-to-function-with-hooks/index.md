@@ -5,7 +5,7 @@ date: '2019-02-06T22:12:03.284Z'
 category: react
 series:
 tags: [hooks]
-published: false
+published: true
 ---
 
 Last year, the React team announced hooks, a feature to more easily abstract logic into reusable components. On the day of the announcement, [I wrote and article](https://medium.com/@seanmcp/refactoring-a-render-prop-with-hooks-fc22ed537199) explaining how to refactor a render prop component with hook.
