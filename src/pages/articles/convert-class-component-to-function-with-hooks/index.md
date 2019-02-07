@@ -1,10 +1,10 @@
 ---
 title: Convert class components to functions with React Hooks
 summary: A step by step guide to converting old components to modern React
-date: '2019-01-28T22:12:03.284Z'
-category: javascript
+date: '2019-02-06T22:12:03.284Z'
+category: react
 series:
-tags: [react, hooks]
+tags: [hooks]
 published: false
 ---
 
@@ -12,7 +12,7 @@ Last year, the React team announced hooks, a feature to more easily abstract log
 
 Starting this week with release of [React v16.8](https://reactjs.org/blog/2019/02/06/react-v16.8.0.html), **you can now add hooks in your projects**!
 
-Today, I want to look at a typical class component and demonstrate how hooks can simplify your code by converting it into a functional component. Let's jump in.
+Today, I want to look at a typical class component and demonstrate how you can covert it into a functional component with React hooks. Let's jump in.
 
 ## Terminology
 
@@ -86,9 +86,9 @@ class ClassComponent extends React.Component {
       <section>
         <h2>Doggo!</h2>
         {this.state.url ? (
-          <img src={this.state.url} alt="A super cute dog" />
+          <img src={this.state.url} alt="A cute dog" />
         ) : (
-          <p>Loading...</p>
+          <p>Fetching</p>
         )}
       </section>
     )
@@ -98,7 +98,7 @@ class ClassComponent extends React.Component {
 
 _**Note**: To create this example, I looked through Todd Motto's awesome list of ["Public APIs"](https://github.com/toddmotto/public-apis). Check it out and give it a star if you find it useful._
 
-I used the fetch library to keep the example straight forward, but I recommend using a more robust option like [Axios](https://github.com/axios/axios) for better error handling.
+I used the fetch library to keep the example straight forward (and it seemed fitting for an app that displays dog photos), but I recommend using a more robust option like [Axios](https://github.com/axios/axios) with better error handling for your applications.
 
 ## Functional Component
 
@@ -114,7 +114,7 @@ const FunctionalComponent = props => {
   return (
     <section>
       <h2>Doggo!</h2>
-      {url ? <img src={url} alt="A super cute dog" /> : <p>Loading...</p>}
+      {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
   )
 }
@@ -139,7 +139,7 @@ const FunctionalComponent = props => {
   return (
     <section>
       <h2>Doggo!</h2>
-      {url ? <img src={url} alt="A super cute dog" /> : <p>Loading...</p>}
+      {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
   )
 }
@@ -174,7 +174,7 @@ const FunctionalComponent = props => {
   return (
     <section>
       <h2>Doggo!</h2>
-      {url ? <img src={url} alt="A super cute dog" /> : <p>Loading...</p>}
+      {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
   )
 }
@@ -195,7 +195,7 @@ const FunctionalComponent = props => {
   return (
     <section>
       <h2>Doggo!</h2>
-      {url ? <img src={url} alt="A super cute dog" /> : <p>Loading...</p>}
+      {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
     </section>
   )
 }
