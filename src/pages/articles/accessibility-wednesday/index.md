@@ -3,7 +3,7 @@ title: Accessibility Wednesday
 summary: Learning and sharing about accessibility for everyone
 date: '2019-02-06T12:12:03.284Z'
 category: accessibility
-tags: [a11y, a11ywednesday]
+tags: ['accessibility']
 published: true
 ---
 
