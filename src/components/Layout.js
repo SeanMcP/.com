@@ -18,7 +18,7 @@ const StyledContainer = styled.div`
 
 const StyledResponsive = styled(Responsive)`
   flex: 1;
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
   margin-top: 1rem;
 `
 

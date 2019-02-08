@@ -1,12 +1,13 @@
 import React from 'react'
 import styled from 'styled-components'
 
-const StyledSection = styled.section`
+const StyledAside = styled.aside`
   align-items: center;
+  background-color: ${p => p.theme.primary_dark};
   background: linear-gradient(
     -10deg,
-    ${props => props.theme.primary_dark},
-    ${props => props.theme.tertiary_dark}
+    ${p => p.theme.primary_dark},
+    ${p => p.theme.tertiary_dark}
   );
   color: white;
   display: flex;
@@ -26,13 +27,13 @@ const Billboard = ({ isRoot }) => {
     return null
   }
   return (
-    <StyledSection>
+    <StyledAside>
       <h1>Sean McP</h1>
       <p>
         Christian, husband, father, dog owner, soccer fan,{' '}
         <strong>software developer</strong>
       </p>
-    </StyledSection>
+    </StyledAside>
   )
 }
 
