@@ -2,7 +2,7 @@
 title: 2018 into 2019
 summary: Reflecting on last year while looking forward to next
 date: '2018-12-31T22:40:32.169Z'
-category: miscellaneous
+category: growth
 tags: [year-in-review, personal, professional]
 published: true
 ---
