@@ -18,7 +18,7 @@ const StyledAside = styled.aside`
   text-align: center;
 
   p {
-    margin-top: 0;
+    margin: 0;
   }
 `
 
