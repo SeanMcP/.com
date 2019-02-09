@@ -2,6 +2,7 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
+import kebabCase from 'lodash/kebabCase'
 
 import { capitalize } from '../../utils/StringUtils'
 
@@ -16,7 +17,7 @@ const StyledLink = styled(Link)`
 `
 
 const SearchLink = ({ queryKey, queryValue }) => (
-  <StyledLink to={`/${queryKey}/${queryValue}`}>
+  <StyledLink to={`/${queryKey}/${kebabCase(queryValue)}`}>
     {queryKey === 'categories' ? capitalize(queryValue) : queryValue}
   </StyledLink>
 )

@@ -16,8 +16,8 @@ const SearchHeader = ({ queryKey, queryValue }) => {
       <div className="SearchHeader">
         <StyledH1>{capValue}</StyledH1>
         <p>
-          All the articles {queryKey === 'Category' ? 'in' : 'with'} the “
-          <strong>{capValue}</strong>” {queryKey.toLowerCase()}.
+          All the articles in the “<strong>{capValue}</strong>”{' '}
+          {queryKey.toLowerCase()}.
         </p>
       </div>
     </PageHeader>

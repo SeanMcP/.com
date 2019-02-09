@@ -3,9 +3,8 @@ import { graphql } from 'gatsby'
 import styled from 'styled-components'
 import get from 'lodash/get'
 
-import CategoryLink from '../components/common/CategoryLink'
+import CategoryIconLink from '../components/common/CategoryIconLink'
 import Layout from '../components/Layout'
-import PageHeader from '../components/common/PageHeader'
 import PostBio from '../components/post/PostBio'
 import PostDate from '../components/post/PostDate'
 import PostFooter from '../components/post/PostFooter'
@@ -14,10 +13,28 @@ import PostTime from '../components/post/PostTime'
 
 import PostStyles from '../styles/components/PostTemplate.styles'
 
-const StyledDiv = styled.div`
+const StyledPostMetaDiv = styled.div`
   > * {
     display: inline;
   }
+`
+
+const StyledPostHeaderDiv = styled.div`
+  border-bottom: 1px solid ${p => p.theme.secondary};
+  display: grid;
+  grid-gap: 1rem;
+  justify-content: center;
+  margin: 1rem 0 2rem;
+  padding-bottom: 2rem;
+  text-align: center;
+
+  img {
+    width: 6rem;
+  }
+`
+
+const StyledH1 = styled.h1`
+  margin: 0;
 `
 
 const PostTemplate = props => {
@@ -36,14 +53,14 @@ const PostTemplate = props => {
         siteTitle={siteTitle}
       />
       <article className="PostTemplate">
-        <PageHeader centered>
-          <h1>{postTitle}</h1>
-          <StyledDiv>
+        <StyledPostHeaderDiv>
+          <CategoryIconLink category={post.frontmatter.category} rounded />
+          <StyledH1>{postTitle}</StyledH1>
+          <StyledPostMetaDiv>
             <PostDate date={post.frontmatter.date} hideIcon /> |{' '}
-            <PostTime time={post.timeToRead} hideIcon /> |{' '}
-            <CategoryLink category={post.frontmatter.category} hideIcon />
-          </StyledDiv>
-        </PageHeader>
+            <PostTime time={post.timeToRead} hideIcon />
+          </StyledPostMetaDiv>
+        </StyledPostHeaderDiv>
         <div
           className="typography"
           dangerouslySetInnerHTML={{ __html: post.html }}
@@ -53,6 +70,8 @@ const PostTemplate = props => {
           articleHref={location.href}
           articleTitle={post.frontmatter.title}
           tags={post.frontmatter.tags}
+          category={post.frontmatter.category}
+          series={post.frontmatter.series}
         />
         <hr />
         <PostBio />
@@ -78,6 +97,7 @@ export const pageQuery = graphql`
       frontmatter {
         category
         date(formatString: "MMM. D, YYYY")
+        series
         summary
         tags
         title

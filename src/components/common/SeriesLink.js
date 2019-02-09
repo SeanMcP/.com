@@ -14,18 +14,18 @@ const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
-const CategoryLink = ({ category, hideIcon }) => {
+const SeriesLink = ({ series, hideIcon }) => {
   return (
     <StyledDiv>
-      {!hideIcon && <StyledIcon icon={'Folder'} />}
-      <SearchLink queryKey={'categories'} queryValue={category} />
+      {!hideIcon && <StyledIcon icon={'List'} />}
+      <SearchLink queryKey={'series'} queryValue={series} />
     </StyledDiv>
   )
 }
 
-CategoryLink.propTypes = {
-  category: PropTypes.string.isRequired,
+SeriesLink.propTypes = {
+  series: PropTypes.string.isRequired,
   hideIcon: PropTypes.bool
 }
 
-export default CategoryLink
+export default SeriesLink

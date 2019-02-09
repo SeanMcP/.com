@@ -2,9 +2,8 @@ import React from 'react'
 import PropTypes from 'prop-types'
 import styled from 'styled-components'
 
-import PostDate from './PostDate'
 import CategoryLink from '../common/CategoryLink'
-import TagLinks from '../common/TagLinks'
+import SeriesLink from '../common/SeriesLink'
 import TweetButton from './TweetButton'
 
 import THEME from '../../styles/theme'
@@ -27,9 +26,10 @@ const StyledFooter = styled.footer`
   }
 `
 
-const PostFooter = ({ articleHref, articleTitle, tags }) => (
+const PostFooter = ({ articleHref, articleTitle, category, series, tags }) => (
   <StyledFooter>
-    <TagLinks tags={tags} />
+    <CategoryLink category={category} />
+    {series && <SeriesLink series={series} />}
     {articleHref && articleTitle && (
       <TweetButton articleHref={articleHref} articleTitle={articleTitle} />
     )}
