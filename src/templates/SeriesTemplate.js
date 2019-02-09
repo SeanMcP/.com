@@ -33,7 +33,7 @@ const SeriesTemplate = props => {
 export default SeriesTemplate
 
 export const pageQuery = graphql`
-  query BlogPostsByCategory($category: String!) {
+  query BlogPostsBySeries($series: String!) {
     site {
       siteMetadata {
         title
@@ -55,7 +55,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             category
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMM. D, YYYY")
             series
             summary
             tags
