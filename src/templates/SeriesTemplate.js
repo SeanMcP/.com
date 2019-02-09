@@ -33,7 +33,7 @@ const SeriesTemplate = props => {
 export default SeriesTemplate
 
 export const pageQuery = graphql`
-  query BlogPostsByCategory($category: String!) {
+  query BlogPostsBySeries($series: String!) {
     site {
       siteMetadata {
         title
