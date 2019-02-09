@@ -3,6 +3,7 @@ import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
 import styled from 'styled-components'
 
+import CategoryIconLink from '../common/CategoryIconLink'
 import PostDate from './PostDate'
 import PostTime from './PostTime'
 
@@ -22,14 +23,12 @@ const StyledH3 = styled.h3`
   margin: 0;
 `
 
-const StyledImg = styled.img`
-  border-radius: 0.5rem;
+const StyledIconContainerDiv = styled.div`
   grid-column: 2 / span 1;
   grid-row: 1 / span 2;
-  width: 100%;
 `
 
-const StyledDiv = styled.div`
+const StyledPostMetaDiv = styled.div`
   grid: 2 / span 1 / 1 / span 1;
   > div {
     display: inline;
@@ -46,14 +45,13 @@ const PostPreview = props => (
     <StyledH3>
       <Link to={props.slug}> {props.title} </Link>{' '}
     </StyledH3>{' '}
-    <StyledImg
-      src={require(`../../assets/icons/${props.category}.png`)}
-      alt={props.category}
-    />{' '}
-    <StyledDiv>
+    <StyledIconContainerDiv>
+      <CategoryIconLink category={props.category} rounded />
+    </StyledIconContainerDiv>
+    <StyledPostMetaDiv>
       <PostDate date={props.date} hideIcon /> |{' '}
       <PostTime time={props.time} hideIcon />
-    </StyledDiv>{' '}
+    </StyledPostMetaDiv>{' '}
     {props.summary && <StyledP> {props.summary} </StyledP>}{' '}
   </StyledArticle>
 )
