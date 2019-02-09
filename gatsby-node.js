@@ -49,7 +49,7 @@ exports.createPages = ({ graphql, actions }) => {
         // let tags = []
         // // Iterate through each post, putting all found tags into `tags`
         // _.each(posts, edge => {
-        //   if (_.get(edge, 'node.frontmatter.tags')) {
+        //   if (_.get(edge, 'node.frontmatter.published') && _.get(edge, 'node.frontmatter.tags')) {
         //     tags = tags.concat(edge.node.frontmatter.tags)
         //   }
         // })
@@ -70,7 +70,10 @@ exports.createPages = ({ graphql, actions }) => {
         // Series
         let series = []
         _.each(posts, edge => {
-          if (_.get(edge, 'node.frontmatter.series')) {
+          if (
+            _.get(edge, 'node.frontmatter.published') &&
+            _.get(edge, 'node.frontmatter.series')
+          ) {
             series.push(edge.node.frontmatter.series)
           }
         })
@@ -91,7 +94,10 @@ exports.createPages = ({ graphql, actions }) => {
         let categories = []
         // Iterate through each post, putting all found categories into `categories`
         _.each(posts, edge => {
-          if (_.get(edge, 'node.frontmatter.category')) {
+          if (
+            _.get(edge, 'node.frontmatter.published') &&
+            _.get(edge, 'node.frontmatter.category')
+          ) {
             categories.push(edge.node.frontmatter.category)
           }
         })
@@ -129,7 +135,10 @@ exports.onCreateNode = ({ node, actions, getNode }) => {
   const { createNodeField } = actions
 
   if (node.internal.type === `MarkdownRemark`) {
-    const value = createFilePath({ node, getNode })
+    const value = createFilePath({
+      node,
+      getNode
+    })
     createNodeField({
       name: `slug`,
       node,
