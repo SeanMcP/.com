@@ -53,7 +53,7 @@ export const pageQuery = graphql`
           }
           frontmatter {
             category
-            date(formatString: "MMMM D, YYYY")
+            date(formatString: "MMM. D, YYYY")
             summary
             tags
             title
