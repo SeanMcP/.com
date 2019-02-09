@@ -7,9 +7,10 @@ exports.createPages = ({ graphql, actions }) => {
   const { createPage } = actions
 
   return new Promise((resolve, reject) => {
-    const blogPost = path.resolve('./src/templates/PostTemplate.js')
-    const categoryTemplate = path.resolve('./src/templates/CategoryTemplate.js')
-    const tagTemplate = path.resolve('./src/templates/TagTemplate.js')
+    const PostTemplate = path.resolve('./src/templates/PostTemplate.js')
+    const CategoryTemplate = path.resolve('./src/templates/CategoryTemplate.js')
+    const SeriesTemplate = path.resolve('./src/templates/SeriesTemplate.js')
+    // const TagTemplate = path.resolve('./src/templates/TagTemplate.js')
     resolve(
       graphql(
         `
@@ -42,24 +43,44 @@ exports.createPages = ({ graphql, actions }) => {
         // Create blog posts pages.
         const posts = result.data.allMarkdownRemark.edges
 
-        // Tag pages:
-        let tags = []
-        // Iterate through each post, putting all found tags into `tags`
+        // // Tag pages:
+        // let tags = []
+        // // Iterate through each post, putting all found tags into `tags`
+        // _.each(posts, edge => {
+        //   if (_.get(edge, 'node.frontmatter.tags')) {
+        //     tags = tags.concat(edge.node.frontmatter.tags)
+        //   }
+        // })
+        // // Eliminate duplicate tags
+        // tags = _.uniq(tags)
+
+        // // Make tag pages
+        // tags.forEach(tag => {
+        //   createPage({
+        //     path: `/tags/${_.kebabCase(tag)}/`,
+        //     component: TagTemplate,
+        //     context: {
+        //       tag
+        //     }
+        //   })
+        // })
+
+        // Series
+        let series = []
         _.each(posts, edge => {
-          if (_.get(edge, 'node.frontmatter.tags')) {
-            tags = tags.concat(edge.node.frontmatter.tags)
+          if (_.get(edge, 'node.frontmatter.series')) {
+            series.push(edge.node.frontmatter.series)
           }
         })
-        // Eliminate duplicate tags
-        tags = _.uniq(tags)
+        series = _.uniq(series)
 
-        // Make tag pages
-        tags.forEach(tag => {
+        // Create series pages
+        series.forEach(series => {
           createPage({
-            path: `/tags/${_.kebabCase(tag)}/`,
-            component: tagTemplate,
+            path: `/series/${_.kebabCase(series)}/`,
+            component: SeriesTemplate,
             context: {
-              tag
+              series
             }
           })
         })
@@ -79,7 +100,7 @@ exports.createPages = ({ graphql, actions }) => {
         categories.forEach(category => {
           createPage({
             path: `/categories/${_.kebabCase(category)}/`,
-            component: categoryTemplate,
+            component: CategoryTemplate,
             context: {
               category
             }
@@ -87,13 +108,15 @@ exports.createPages = ({ graphql, actions }) => {
         })
 
         _.each(posts, post => {
-          createPage({
-            path: `${post.node.fields.slug.slice(1)}`,
-            component: blogPost,
-            context: {
-              slug: post.node.fields.slug
-            }
-          })
+          if (post.node.frontmatter.published) {
+            createPage({
+              path: `${post.node.fields.slug.slice(1)}`,
+              component: PostTemplate,
+              context: {
+                slug: post.node.fields.slug
+              }
+            })
+          }
         })
       })
     )
