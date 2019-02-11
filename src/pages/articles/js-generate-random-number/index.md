@@ -1,6 +1,6 @@
 ---
 title: 'JS Basics: Generate a random number'
-summary: Using JavaScript's `Math` object to generate random numbers
+summary: Using JavaScript's Math object to generate random numbers
 date: '2019-02-11T12:12:03.284Z'
 category: javascript
 series: JS Basics
