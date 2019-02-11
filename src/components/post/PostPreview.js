@@ -15,6 +15,10 @@ const StyledArticle = styled.article`
   :not(:last-of-type) {
     margin-bottom: 2rem;
   }
+
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    grid-template-columns: 1fr 2rem;
+  }
 `
 
 const StyledH3 = styled.h3`
@@ -29,15 +33,22 @@ const StyledIconContainerDiv = styled.div`
 `
 
 const StyledPostMetaDiv = styled.div`
-  grid: 2 / span 1 / 1 / span 1;
+  font-size: 90%;
+  grid-column: 1 / span 1;
+  grid-row: 2 / span 1;
   > div {
     display: inline;
   }
 `
 
 const StyledP = styled.p`
-  grid: 3 / span 1 / 1 / span 1;
+  grid-column: 1 / span 1;
+  grid-row: 3 / span 1;
   margin: 0;
+
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    grid-column-end: span 2;
+  }
 `
 
 const PostPreview = props => (
