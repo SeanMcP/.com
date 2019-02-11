@@ -39,7 +39,9 @@ const PostFooter = ({ articleHref, articleTitle, category, series, tags }) => (
 PostFooter.propTypes = {
   articleHref: PropTypes.string,
   articleTitle: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string).isRequired
+  category: PropTypes.string,
+  series: PropTypes.string,
+  tags: PropTypes.arrayOf(PropTypes.string)
 }
 
 export default PostFooter
