@@ -36,7 +36,7 @@ export default createGlobalStyle`
     max-width: initial !important;
 }
 
-.footnotes li > * {
+/* .footnotes li > * {
     display: inline;
-}
+} */
 `
