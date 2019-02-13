@@ -2,19 +2,34 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
+import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/Layout'
 import PostPreview from '../components/post/PostPreview'
-import SearchHeader from '../components/common/SearchHeader'
+import PageHeader from '../components/common/PageHeader'
+
+const copy = {
+  'js-basics':
+    'Exploring the fundamentals of JavaScript for learners of all ages and experience levels'
+}
 
 const SeriesTemplate = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
   const posts = get(props, 'data.allMarkdownRemark.edges', [])
   const { series } = props.pageContext
+  const seriesKey = kebabCase(series.toLowerCase())
   return (
     <Layout location={props.location} title={siteTitle}>
-      <Helmet title={`Series | ${siteTitle}`} />
-      <SearchHeader queryKey={'Series'} queryValue={series} />
+      <Helmet title={`${series} series | ${siteTitle}`} />
+      <PageHeader>
+        <h1>{series}</h1>
+        <p>
+          {copy[seriesKey]
+            ? copy[seriesKey]
+            : `All the articles in the ${series} series`}
+          .
+        </p>
+      </PageHeader>
       {posts.map(({ node }) => (
         <PostPreview
           key={node.fields.slug}

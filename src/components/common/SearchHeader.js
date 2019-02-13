@@ -17,7 +17,7 @@ const SearchHeader = ({ queryKey, queryValue }) => {
         <StyledH1>{capValue}</StyledH1>
         <p>
           All the articles in the “<strong>{capValue}</strong>”{' '}
-          {queryKey.toLowerCase()}.
+          {queryKey.toLowerCase()}
         </p>
       </div>
     </PageHeader>
