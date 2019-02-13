@@ -32,7 +32,7 @@ const renderProjectsPerCategory = (category, projects) => {
             <b>{name}</b>: {description}{' '}
             {repo && (
               <span>
-                <a href={`https://github.com/${repo}`}>(Repo)</a>
+                <a href={`https://github.com/${repo}`}>(source code)</a>
               </span>
             )}
           </li>
