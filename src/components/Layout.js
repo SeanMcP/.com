@@ -8,6 +8,7 @@ import Billboard from './Billboard'
 import Header from './Header'
 import Responsive from './common/Responsive'
 import Footer from './Footer'
+import SkipLink from './SkipLink'
 
 const StyledContainer = styled.div`
   display: flex;
@@ -26,11 +27,12 @@ const Layout = ({ location, title, children }) => {
   return (
     <ThemeProvider theme={theme}>
       <StyledContainer>
+        <SkipLink />
         <GlobalStyle />
         <Header location={location} title={title} />
         <Billboard isRoot={location.pathname === '/'} />
         <StyledResponsive>
-          <main>{children}</main>
+          <main id="main">{children}</main>
         </StyledResponsive>
         <Footer />
       </StyledContainer>
