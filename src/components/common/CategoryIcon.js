@@ -12,6 +12,7 @@ const CategoryIcon = ({ category = defaultIcon, rounded = false }) => {
   const availableIcons = [
     'accessibility',
     'advice',
+    'gatsby',
     'growth',
     'javascript',
     'meta',
