@@ -111,7 +111,8 @@ class MainNav extends React.Component {
   focusChild = () => {
     if (this.nav) this.nav.childNodes[this.state.focusIndex].focus()
   }
-  decrementFocusIndex = () => {
+  decrementFocusIndex = e => {
+    e.preventDefault()
     this.setState(prevState => {
       const proposedIndex = prevState.focusIndex - 1
       const maxIndex = this.nav.childElementCount - 1
@@ -120,7 +121,8 @@ class MainNav extends React.Component {
       }
     }, this.focusChild)
   }
-  incrementFocusIndex = () => {
+  incrementFocusIndex = e => {
+    e.preventDefault()
     this.setState(prevState => {
       const proposedIndex = prevState.focusIndex + 1
       const maxIndex = this.nav.childElementCount - 1

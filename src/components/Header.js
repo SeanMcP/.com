@@ -46,6 +46,11 @@ const Header = props => {
   function focusMenuButton() {
     menuButton.current.focus()
   }
+  function openMenu(e) {
+    return () => {
+      e.preventDefault()
+    }
+  }
   return (
     <Open>
       {openProps => (
@@ -65,7 +70,10 @@ const Header = props => {
               aria-expanded={openProps.isOpen}
               onClick={openProps.toggle}
               onKeyDown={onKey({
-                [KEY.ArrowDown]: openProps.open
+                [KEY.ArrowDown]: e => {
+                  e.preventDefault()
+                  openProps.open()
+                }
               })}
               ref={menuButton}
               isOpen={openProps.isOpen}
