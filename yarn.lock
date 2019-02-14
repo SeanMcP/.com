@@ -1024,9 +1024,9 @@ ajv@^6.1.0, ajv@^6.5.5:
     json-schema-traverse "^0.4.1"
     uri-js "^4.2.2"
 
-all-keyboardevent-keys@0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/all-keyboardevent-keys/-/all-keyboardevent-keys-0.0.1.tgz#bb65e99799deb04faba3a93e63dccd711d8f5ea6"
+all-keyboardevent-keys@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/all-keyboardevent-keys/-/all-keyboardevent-keys-0.0.4.tgz#4784fc7df6e4bd55200a0447a83c3cdb6b7d8eb9"
 
 alphanum-sort@^1.0.0:
   version "1.0.2"
@@ -7588,11 +7588,11 @@ onetime@^2.0.0:
   dependencies:
     mimic-fn "^1.0.0"
 
-onkey-event-manager@^0.0.1:
-  version "0.0.1"
-  resolved "https://registry.yarnpkg.com/onkey-event-manager/-/onkey-event-manager-0.0.1.tgz#8cae8b650e1f5d955bdd77be73645c935e497db6"
+onkey-event-manager@^0.0.4:
+  version "0.0.4"
+  resolved "https://registry.yarnpkg.com/onkey-event-manager/-/onkey-event-manager-0.0.4.tgz#fa5a9c5cc9f3f755b5583830a1c5605eb9fe7a9c"
   dependencies:
-    all-keyboardevent-keys "0.0.1"
+    all-keyboardevent-keys "^0.0.4"
 
 opentracing@^0.14.3:
   version "0.14.3"
