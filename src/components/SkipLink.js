@@ -20,11 +20,15 @@ const StyledLink = styled.a`
 
 class SkipLink extends React.Component {
   componentDidMount() {
-    window.addEventListener('hashchange', () => {
-      if (location.hash === '#main') {
-        document.getElementById('main').focus()
-      }
-    })
+    window.addEventListener('hashchange', this.moveFocus)
+  }
+  componentWillUnmount() {
+    window.removeEventListener('hashchange', this.moveFocus)
+  }
+  moveFocus = () => {
+    if (location.hash === '#main') {
+      document.getElementById('main').focus()
+    }
   }
   render() {
     return <StyledLink href="#main">Skip to main content</StyledLink>
