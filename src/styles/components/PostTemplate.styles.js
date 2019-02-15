@@ -33,6 +33,9 @@ export default createGlobalStyle`
 }
 
 .gatsby-resp-image-wrapper {
+    border: 1px solid ${p => p.theme.secondary};
+    margin-bottom: 2rem;
+    margin-top: 2rem;
     max-width: initial !important;
 }
 
