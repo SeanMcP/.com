@@ -124,9 +124,9 @@ const FunctionalComponent = props => {
 
 In our class component, we make an AJAX request when the component mounted and stored that data in state. `componentDidMount` and the other lifecycle methods are limited to classes. However, the React team was able to implement those features with the `useEffect` hook.
 
-`useEffect` is a method that takes two parameters: 1) a function to call on mount, and 2) variables to watch for updating. For our example, we'll only need the first of these two parameters.
+`useEffect` is a method that takes two parameters: 1) a function to call on mount, and 2) an array of variables to watch for updating.
 
-We'll pass an anonymous function that calls fetch and processes the data. We'll just log the response for now.
+For the first parameter, we'll pass an anonymous function that calls fetch, processes the data, and logs the response. The second argument just be an empty array for now.
 
 ```jsx{3-7}
 const FunctionalComponent = props => {
@@ -135,7 +135,7 @@ const FunctionalComponent = props => {
     fetch('https://random.dog/woof.json')
       .then(raw => raw.json())
       .then(res => console.log(res))
-  })
+  }, [])
   return (
     <section>
       <h2>Doggo!</h2>
@@ -170,7 +170,7 @@ const FunctionalComponent = props => {
     fetch('https://random.dog/woof.json')
       .then(raw => raw.json())
       .then(res => console.log(res))
-  })
+  }, [])
   return (
     <section>
       <h2>Doggo!</h2>
@@ -191,7 +191,28 @@ const FunctionalComponent = props => {
     fetch('https://random.dog/woof.json')
       .then(raw => raw.json())
       .then(res => setUrl(res.url))
-  })
+  }, [])
+  return (
+    <section>
+      <h2>Doggo!</h2>
+      {url ? <img src={url} alt="A cute dog" /> : <p>Fetching</p>}
+    </section>
+  )
+}
+```
+
+Now let's take a second to revisit the second parameter passed to `useEffect`. Remember, it contains a list of variables that will trigger the effect to run again on change.
+
+Our effect depends on one outside variable: `setUrl`. This function is generated once by `useState`, and adding it to the array will ensure that our fetch call isn't fired repeatedly.[^1]
+
+```jsx{7}
+const FunctionalComponent = props => {
+  const [url, setUrl] = React.useState(null)
+  React.useEffect(() => {
+    fetch('https://random.dog/woof.json')
+      .then(raw => raw.json())
+      .then(res => setUrl(res.url))
+  }, [setUrl])
   return (
     <section>
       <h2>Doggo!</h2>
@@ -205,13 +226,9 @@ That's it! Checkout the [live example](https://codesandbox.io/s/wwvmq1v407) on C
 
 ## Comparison
 
-Let's look at a before-and-after comparison of our two components.
+Let's take a moment and consider our two components. The new functional component is a little shorter than the original class component, and the variables are shorter and easier to reference.
 
-![A side-by-side diff comparison of the class component and functional component with hooks](./diff.png)
-
-Our new component is a little shorter than the original class component, and the variables are shorter and easier to reference.
-
-That are nice benefits, but I don't find either a convincing reason to go back and convert all my class components.
+Those are nice benefits, but I don't find either a convincing reason to go back and convert all my class components.
 
 More important to me is the fact that **you can now use a functional component for nearly everything in your application**. Since every component is functional, it makes the process of bringing in or removing state and lifecycle effects much easier.
 
@@ -224,3 +241,5 @@ But don't panic and convert all your class components right now; ["they'll be su
 I hope that helps! Let me know if you have any questions, comments, or corrections on Twitter: [@\_seanmcp](https://twitter.com/_seanmcp).
 
 Happy coding!
+
+[^1]: A big thanks to [Hung Tran Van](https://medium.com/@hungtrn75) on Medium for [highlighting a previous issue with this article](https://medium.com/@hungtrn75/an-infinite-loop-when-u-set-url-state-in-useeffect-efc4426ef4ce). While fixing my mistake, I found [_How the useEffect Hook Works_](https://daveceddia.com/useeffect-hook-examples/) by David Ceddia to be super helpful.
