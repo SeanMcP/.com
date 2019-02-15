@@ -1,5 +1,4 @@
 import React from 'react'
-import { Link } from 'gatsby'
 import styled from 'styled-components'
 
 const StyledLink = styled.a`
@@ -18,21 +17,17 @@ const StyledLink = styled.a`
   }
 `
 
-class SkipLink extends React.Component {
-  componentDidMount() {
-    window.addEventListener('hashchange', this.moveFocus)
-  }
-  componentWillUnmount() {
-    window.removeEventListener('hashchange', this.moveFocus)
-  }
-  moveFocus = () => {
+const SkipLink = () => {
+  React.useEffect(() => {
+    window.addEventListener('hashchange', moveFocus)
+    return () => window.removeEventListener('hashchange', moveFocus)
+  })
+  function moveFocus() {
     if (location.hash === '#main') {
       document.getElementById('main').focus()
     }
   }
-  render() {
-    return <StyledLink href="#main">Skip to main content</StyledLink>
-  }
+  return <StyledLink href="#main">Skip to main content</StyledLink>
 }
 
 export default SkipLink
