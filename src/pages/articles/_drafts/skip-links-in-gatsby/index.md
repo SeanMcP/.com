@@ -3,8 +3,9 @@ title: How to add skip links to Gatsby
 summary: A step-by-step guide to adding accessible skip links to your Gatsby Site
 date: '2019-02-13T12:12:03.284Z'
 category: gatsby
+series: Gatsby Blogging
 tags: [accessibility]
-published: true
+published: false
 ---
 
 Skip links, also referred to as skip navigation links, are a tool utilized by keyboard users to quickly navigate through a web pages.
