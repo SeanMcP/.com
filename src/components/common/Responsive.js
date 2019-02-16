@@ -1,8 +1,6 @@
 import React from 'react'
 import styled, { css } from 'styled-components'
 
-import THEME from '../../styles/theme'
-
 const StyledSection = styled.section`
   align-items: ${({ alignItems }) => (alignItems ? alignItems : 'initial')};
   display: ${({ alignItems, flex, justifyContent }) =>
@@ -14,9 +12,9 @@ const StyledSection = styled.section`
   max-width: ${p => p.theme.size};
   width: 100%;
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
-    ${({ overrideMobileColum }) =>
-      !overrideMobileColum &&
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    ${({ overrideMobileColumn }) =>
+      !overrideMobileColumn &&
       css`
         flex-direction: column;
       `};

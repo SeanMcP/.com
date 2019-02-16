@@ -17,7 +17,7 @@ const Footer = () => {
   const year = new Date().getFullYear()
   return (
     <StyledFooter>
-      <Responsive justifyContent="space-between" overrideMobileColum>
+      <Responsive justifyContent="space-between" overrideMobileColumn>
         <p>© Sean McPherson 2018 - {year}</p>
         <p>(SDG)</p>
       </Responsive>

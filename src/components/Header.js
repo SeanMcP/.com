@@ -58,7 +58,7 @@ const Header = props => {
           <Responsive
             alignItems="center"
             justifyContent="space-between"
-            overrideMobileColum
+            overrideMobileColumn
           >
             <StyledLink to={'/'}>{props.title}</StyledLink>
             <StyledButton
