@@ -15,7 +15,11 @@ const Projects = () => {
       <hr className="--short" />
       <p>
         At any given time, I have a lot of projects on which I'm working. For a
-        full list, checkout my GitHub account
+        full list, checkout{' '}
+        <a href="https://github.com/seanmcp?tab=repositories">
+          my GitHub account
+        </a>
+        .
       </p>
       <StyledCategoryUl>{projectsByCategory}</StyledCategoryUl>
     </>
