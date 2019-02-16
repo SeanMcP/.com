@@ -19,21 +19,21 @@ const Contact = ({ data, location }) => {
       />
       <PageHeader>
         <h1>Contact</h1>
+        <p>
+          Do you have an excited job opportunity for me?{' '}
+          <a
+            href="https://seanmcp.github.io/areyoulookingforwork"
+            target="_blank"
+          >
+            Check my availability here
+          </a>
+          . You can also find my contact details on{' '}
+          <a href="https://linkedin.com/in/seanmcp" target="_blank">
+            LinkedIn
+          </a>
+          .
+        </p>
       </PageHeader>
-      <p>
-        Do you have an excited job opportunity for me?{' '}
-        <a
-          href="https://seanmcp.github.io/areyoulookingforwork"
-          target="_blank"
-        >
-          Check my availability here
-        </a>
-        . For other inquiries, you can find my contact details on{' '}
-        <a href="https://linkedin.com/in/seanmcp" target="_blank">
-          LinkedIn
-        </a>
-        .
-      </p>
       <ContactForm />
     </Layout>
   )

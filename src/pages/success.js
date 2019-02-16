@@ -21,13 +21,11 @@ const SuccessPage = ({ data, location }) => {
       />
       <PageHeader>
         <h1>Success</h1>
+        <p>
+          Thanks for reaching out! I'll get back to you as soon as possible. In
+          the meantime, checkout some of the latest articles:
+        </p>
       </PageHeader>
-      <p>
-        Thanks for reaching out! I'll get back to you as soon as possible. In
-        the meantime, checkout the latest article from the blog:
-      </p>
-      <h2>Latest article</h2>
-      <hr />
       {posts.map(({ node }) => (
         <PostPreview
           key={node.fields.slug}
@@ -56,7 +54,8 @@ export const pageQuery = graphql`
     }
     allMarkdownRemark(
       filter: { frontmatter: { published: { eq: true } } }
-      limit: 1
+      sort: { fields: [frontmatter___date], order: DESC }
+      limit: 3
     ) {
       edges {
         node {
