@@ -3,10 +3,11 @@ import { graphql } from 'gatsby'
 import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
+import ContactForm from '../components/contact/ContactForm'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
 
-const ContactPage = ({ data, location }) => {
+const Contact = ({ data, location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
   const siteDescription = get(data, 'site.siteMetadata.description')
   return (
@@ -33,11 +34,12 @@ const ContactPage = ({ data, location }) => {
         </a>
         .
       </p>
+      <ContactForm />
     </Layout>
   )
 }
 
-export default ContactPage
+export default Contact
 
 export const pageQuery = graphql`
   query {
