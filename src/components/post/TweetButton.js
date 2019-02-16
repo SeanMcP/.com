@@ -4,15 +4,13 @@ import styled from 'styled-components'
 
 import Icon from '../common/Icon'
 
-import THEME from '../../styles/theme'
-
 const StyledA = styled.a`
   align-items: center;
   display: flex;
   margin-left: auto;
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
-    border: 2px solid ${THEME.COLOR_PRIMARY};
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    border: 2px solid ${p => p.theme.primary_dark};
     border-radius: 5rem;
     margin-right: auto;
     margin-top: 1rem;
@@ -21,9 +19,9 @@ const StyledA = styled.a`
 
     &:hover,
     &:active {
-      background: ${THEME.HOVER_PRIMARY};
-      border-color: ${THEME.HOVER_PRIMARY};
-      color: ${THEME.TEXT_SECONDARY};
+      background: ${p => p.theme.primary};
+      border-color: ${p => p.theme.primary};
+      color: white;
       text-decoration: none;
     }
   }

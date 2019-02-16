@@ -6,8 +6,6 @@ import CategoryLink from '../common/CategoryLink'
 import SeriesLink from '../common/SeriesLink'
 import TweetButton from './TweetButton'
 
-import THEME from '../../styles/theme'
-
 const StyledFooter = styled.footer`
   align-items: center;
   display: flex;
@@ -16,7 +14,7 @@ const StyledFooter = styled.footer`
     margin-right: 2rem;
   }
 
-  @media screen and (max-width: ${THEME.SIZE_MOBILE}) {
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
     align-items: flex-start;
     flex-direction: column;
 

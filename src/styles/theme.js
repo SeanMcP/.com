@@ -1,14 +1,3 @@
-export default {
-  BACKGROUND_PRIMARY: '#FAFAFA',
-  BACKGROUND_SECONDARY: '#424242',
-  BORDER_PRIMARY: '#EEEEEE',
-  TEXT_PRIMARY: '#424242',
-  TEXT_SECONDARY: '#FAFAFA',
-  COLOR_PRIMARY: '#0D47A1',
-  HOVER_PRIMARY: '#1565C0',
-  SIZE_MOBILE: '42rem'
-}
-
 export const theme = {
   primary: '#42a5f5',
   primary_dark: '#0077c2',
