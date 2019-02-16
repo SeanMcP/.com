@@ -60,7 +60,8 @@ const Header = ({ title, location }) => {
       >
         <StyledLink to={'/'}>{title}</StyledLink>
         <StyledButton
-          aria-controls="MainNav"
+          // Doesn't work with the nav only rendering on open
+          // aria-controls="MainNav"
           aria-label={`${isOpen ? 'Close' : 'Open'} main navigation`}
           aria-haspopup={true}
           aria-expanded={isOpen}
