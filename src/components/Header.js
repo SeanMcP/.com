@@ -6,7 +6,7 @@ import { KEY, onKey } from 'onkey-event-manager'
 
 import Icon from './common/Icon'
 import MainNav from './MainNav'
-import Open from './common/Open'
+import useOpen from '../hooks/useOpen'
 import Responsive from './common/Responsive'
 
 const StyledHeader = styled.header`
@@ -41,57 +41,48 @@ const StyledButton = styled.button`
     `}
 `
 
-const Header = props => {
-  const menuButton = React.createRef()
+const Header = ({ title, location }) => {
+  const { close, isOpen, open, toggle } = useOpen()
+  const menuButton = React.useRef()
   function focusMenuButton() {
     menuButton.current.focus()
   }
   function openMenu(e) {
-    return () => {
-      e.preventDefault()
-    }
+    e.preventDefault()
+    open()
   }
   return (
-    <Open>
-      {openProps => (
-        <StyledHeader>
-          <Responsive
-            alignItems="center"
-            justifyContent="space-between"
-            overrideMobileColumn
-          >
-            <StyledLink to={'/'}>{props.title}</StyledLink>
-            <StyledButton
-              aria-controls="MainNav"
-              aria-label={`${
-                openProps.isOpen ? 'Close' : 'Open'
-              } main navigation`}
-              aria-haspopup={true}
-              aria-expanded={openProps.isOpen}
-              onClick={openProps.toggle}
-              onKeyDown={onKey({
-                [KEY.ArrowDown]: e => {
-                  e.preventDefault()
-                  openProps.open()
-                }
-              })}
-              ref={menuButton}
-              isOpen={openProps.isOpen}
-            >
-              <Icon icon={'Menu'} />
-            </StyledButton>
-          </Responsive>
-          {openProps.isOpen && (
-            <MainNav
-              focusMenuButton={focusMenuButton}
-              id="MainNav"
-              location={props.location}
-              {...openProps}
-            />
-          )}
-        </StyledHeader>
+    <StyledHeader>
+      <Responsive
+        alignItems="center"
+        justifyContent="space-between"
+        overrideMobileColumn
+      >
+        <StyledLink to={'/'}>{title}</StyledLink>
+        <StyledButton
+          aria-controls="MainNav"
+          aria-label={`${isOpen ? 'Close' : 'Open'} main navigation`}
+          aria-haspopup={true}
+          aria-expanded={isOpen}
+          onClick={toggle}
+          onKeyDown={onKey({
+            [KEY.ArrowDown]: openMenu
+          })}
+          ref={menuButton}
+          isOpen={isOpen}
+        >
+          <Icon icon={'Menu'} />
+        </StyledButton>
+      </Responsive>
+      {isOpen && (
+        <MainNav
+          focusMenuButton={focusMenuButton}
+          id="MainNav"
+          location={location}
+          close={close}
+        />
       )}
-    </Open>
+    </StyledHeader>
   )
 }
 
