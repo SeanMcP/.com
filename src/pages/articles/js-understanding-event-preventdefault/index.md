@@ -5,7 +5,7 @@ date: '2019-02-12T12:12:03.284Z'
 category: javascript
 tags: [event, preventDefault]
 series:
-published: true
+published: false
 ---
 
 If you were to read through the React documentation for Forms, you would come across the following code under ["Controlled Components"](https://reactjs.org/docs/forms.html#controlled-components):
