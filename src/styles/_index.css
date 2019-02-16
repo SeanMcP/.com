@@ -39,5 +39,4 @@ kbd {
 @import './headings.css';
 
 /* Components */
-@import './components/ContactForm.css';
 @import './components/PostTemplate.css';

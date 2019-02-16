@@ -18,6 +18,7 @@ export default createGlobalStyle`
     }
 
     *:focus {
-        outline-color: ${props => props.theme.primary};
+        outline: none;
+        box-shadow: 0 0 0 4px ${p => p.theme.accent};
     }
 `
