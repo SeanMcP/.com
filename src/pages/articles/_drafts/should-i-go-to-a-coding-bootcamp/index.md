@@ -4,7 +4,7 @@ summary: My advice as a coding bootcamp grad for potential developers 2019
 date: '2019-02-04T07:00:00.000Z'
 category: advice
 tags: ['coding-bootcamp']
-published: true
+published: false
 ---
 
 This past week, a friend reached out to me looking for help. He was considering quitting his job and enrolling in a full-time coding bootcamp and wanted to hear about my experience.
