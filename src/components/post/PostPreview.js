@@ -15,10 +15,6 @@ const StyledArticle = styled.article`
   :not(:last-of-type) {
     margin-bottom: 2rem;
   }
-
-  @media screen and (max-width: ${p => p.theme.size_mobile}) {
-    grid-template-columns: 1fr 2rem;
-  }
 `
 
 const StyledH3 = styled.h3`
