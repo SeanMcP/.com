@@ -23,6 +23,10 @@ const StyledResponsive = styled(Responsive)`
   margin-top: 1rem;
 `
 
+const StyledMain = styled.main`
+  padding: 1rem 0;
+`
+
 const Layout = ({ location, title, children }) => {
   return (
     <ThemeProvider theme={theme}>
@@ -32,7 +36,7 @@ const Layout = ({ location, title, children }) => {
         <Header location={location} title={title} />
         <Billboard isRoot={location.pathname === '/'} />
         <StyledResponsive>
-          <main id="main">{children}</main>
+          <StyledMain id="main">{children}</StyledMain>
         </StyledResponsive>
         <Footer />
       </StyledContainer>

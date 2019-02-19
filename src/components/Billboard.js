@@ -7,7 +7,7 @@ const StyledAside = styled.aside`
   background: linear-gradient(
     -10deg,
     ${p => p.theme.primary_dark},
-    ${p => p.theme.tertiary_dark}
+    ${p => p.theme.extra_dark}
   );
   color: white;
   display: flex;

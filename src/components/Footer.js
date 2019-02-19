@@ -4,7 +4,7 @@ import styled from 'styled-components'
 import Responsive from './common/Responsive'
 
 const StyledFooter = styled.footer`
-  background: ${props => props.theme.primary_dark};
+  background: ${props => props.theme.text};
   color: ${props => props.theme.secondary_light};
   padding: 1rem 0;
 
