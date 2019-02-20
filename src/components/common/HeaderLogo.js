@@ -3,7 +3,7 @@ import styled from 'styled-components'
 
 const Svg = styled.svg`
   height: 2rem;
-  width: 100%;
+  width: initial;
 `
 
 const Path = styled.path`
