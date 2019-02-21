@@ -23,7 +23,9 @@ const Articles = props => {
       />
       <PageHeader>
         <h1>Articles</h1>
-        {categories && <ArticleCategories list={categories} />}
+        {categories && (
+          <ArticleCategories list={categories} navigate={props.navigate} />
+        )}
       </PageHeader>
       {posts.map(({ node }) => (
         <PostPreview
