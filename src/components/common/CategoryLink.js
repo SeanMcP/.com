@@ -5,7 +5,7 @@ import styled from 'styled-components'
 import Icon from './Icon'
 import SearchLink from './SearchLink'
 
-const StyledDiv = styled.div`
+const StyledSpan = styled.span`
   align-items: center;
   display: flex;
 `
@@ -14,12 +14,12 @@ const StyledIcon = styled(Icon)`
   margin-right: 0.5rem;
 `
 
-const CategoryLink = ({ category, hideIcon }) => {
+const CategoryLink = ({ category, hideIcon, ...props }) => {
   return (
-    <StyledDiv>
+    <StyledSpan {...props}>
       {!hideIcon && <StyledIcon icon={'Folder'} />}
       <SearchLink queryKey={'categories'} queryValue={category} />
-    </StyledDiv>
+    </StyledSpan>
   )
 }
 
