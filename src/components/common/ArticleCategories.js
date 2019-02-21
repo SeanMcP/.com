@@ -13,9 +13,9 @@ const ArticleCategories = ({ list, navigate }) => {
       <span>Categories:</span>
       <Styled.Select onChange={navigateToCategory}>
         <option value="">Select a category</option>
-        {list.map(({ fieldValue }) => (
+        {list.map(({ fieldValue, totalCount }) => (
           <option value={fieldValue} key={fieldValue}>
-            {capitalize(fieldValue)}
+            {capitalize(fieldValue)} ({totalCount})
           </option>
         ))}
       </Styled.Select>
