@@ -32,7 +32,7 @@ const SuccessPage = ({ data, location }) => {
           category={node.frontmatter.category}
           date={node.frontmatter.date}
           slug={node.fields.slug}
-          summary={node.frontmatter.summary}
+          summary={node.excerpt}
           tags={node.frontmatter.tags}
           time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}

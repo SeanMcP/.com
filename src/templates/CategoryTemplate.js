@@ -19,7 +19,7 @@ const CategoryTemplate = props => {
         <PostPreview
           key={node.fields.slug}
           category={node.frontmatter.category}
-          summary={node.frontmatter.summary}
+          summary={node.excerpt}
           date={node.frontmatter.date}
           slug={node.fields.slug}
           time={node.timeToRead}

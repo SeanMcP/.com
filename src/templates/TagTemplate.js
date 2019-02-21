@@ -21,7 +21,7 @@ const TagTemplate = props => {
           category={node.frontmatter.category}
           date={node.frontmatter.date}
           slug={node.fields.slug}
-          summary={node.frontmatter.summary}
+          summary={node.excerpt}
           time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
         />
