@@ -39,7 +39,7 @@ export default createGlobalStyle`
     max-width: initial !important;
 }
 
-/* .footnotes li > * {
-    display: inline;
-} */
+.typography img {
+    width: 100%;
+}
 `
