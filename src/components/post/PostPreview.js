@@ -1,7 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link } from 'gatsby'
-import styled from 'styled-components'
 
 import CategoryIconLink from '../common/CategoryIconLink'
 import PostDate from './PostDate'
@@ -19,13 +18,8 @@ const PostPreview = props => (
       <Styled.MetaContainerDiv>
         <PostDate date={props.date} hideIcon /> |{' '}
         <PostTime time={props.time} hideIcon />
-      </Styled.MetaContainerDiv>{' '}
-      {props.summary && (
-        <Styled.SummaryP>
-          {props.summary}{' '}
-          <Styled.ReadMoreLink to={props.slug}>Read more →</Styled.ReadMoreLink>
-        </Styled.SummaryP>
-      )}{' '}
+      </Styled.MetaContainerDiv>
+      {props.summary && <Styled.SummaryP>{props.summary}</Styled.SummaryP>}
     </div>
   </Styled.Article>
 )

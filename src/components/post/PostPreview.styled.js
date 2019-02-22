@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Link } from 'gatsby'
 
 export const Article = styled.article`
   display: grid;
@@ -38,11 +37,4 @@ export const H3 = styled.h3`
 
 export const SummaryP = styled.p`
   margin: 0;
-`
-
-export const ReadMoreLink = styled(Link)`
-  @media screen and (max-width: ${p => p.theme.size_mobile}) {
-    display: block;
-    margin-top: 0.5rem;
-  }
 `
