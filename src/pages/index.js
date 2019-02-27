@@ -2,11 +2,25 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
+import styled from 'styled-components'
 
 import { Introduction } from '../components/text/Text'
 import Layout from '../components/Layout'
 import PostPreview from '../components/post/PostPreview'
 import Projects from '../components/home/Projects'
+import Icon from '../components/common/Icon'
+
+const StyledP = styled.p`
+  align-items: center;
+  display: flex;
+  flex-wrap: wrap;
+  margin-bottom: 0;
+  margin-top: 2rem;
+`
+
+const StyledIcon = styled(Icon)`
+  margin-right: 0.25rem;
+`
 
 const BlogIndex = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -35,6 +49,10 @@ const BlogIndex = props => {
           time={node.timeToRead}
         />
       ))}
+      <StyledP>
+        <StyledIcon icon="Rss" />
+        <a href="./rss.xml">Subscribe to the blog (RSS)</a>
+      </StyledP>
     </Layout>
   )
 }
