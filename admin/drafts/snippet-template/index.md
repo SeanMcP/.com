@@ -1,18 +1,22 @@
 ---
 title: Snippet Template
 summary:
-date: '2020-12-04T12:12:03.284Z'
+date: '2018-12-04T12:12:03.284Z'
 category: meta
 tags: []
-published: false
+published: true
 ---
 
-```md
-1. Go to: https://bit.ly/a11y-screen-reader
-2. Choose a one-way flight from a nearby airport to Melbourne, Australia
-3. Select a window seat
-4. Unselect "receive promotional offers"
-5. Search
+```html
+<!-- Using the for attribute -->
+<label for="pw">Password</label>
+<input type="password" id="pw" />
+
+<!-- Wrapping the input in a label -->
+<label>
+  <span>Confirm password</span>
+  <input type="password" id="pwConfirm" />
+</label>
 ```
 
 ## Capture
