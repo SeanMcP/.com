@@ -5,7 +5,7 @@ date: '2019-02-20T22:12:03.284Z'
 category: python
 series: Python Basics
 tags: []
-published: true
+published: false
 ---
 
 A ternary or conditional operator is like an inline `if` statement. In Python, you can identify them by an `if` and `else` in a single line.
