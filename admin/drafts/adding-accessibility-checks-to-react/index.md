@@ -8,7 +8,7 @@ tags: [react, accessibility, a11y]
 published: false
 ---
 
-Making accessible applications is hard. Fortunately, there are some great resources available that add accessibility checks to your code in development. We'll look at three great options that will help you make your React applications more accessible.
+Let's face it: making accessible applications can be hard. Fortunately, there are some great resources available that help you check to make sure . We'll look at three great options that will help you make your React applications more accessible.
 
 But first, why should anyone care about accessibility?
 
@@ -142,4 +142,12 @@ If you want more customization over which rules jsx-a11y uses, refer to [the off
 
 ## A11y-react-starter
 
-I created [`a11y-react-starter`](https://github.com/seanmcp/a11y-react-starter), a lightly-configured create-react-app with all of the above accessibility checking baked in. Check it out for inspiration or a starting point for your next app.
+I created [`a11y-react-starter`](https://github.com/seanmcp/a11y-react-starter), a lightly-configured create-react-app with all of the above accessibility checking baked in. Check it out for a reference or use it as a starting point for your next app.
+
+## Conclusion
+
+By enabling these accessibility features, you're adding the wisdom and knowledge of countless developers who have gone before you. With their help, and a little bit of learning, anyone can create accessible applications that work for all users.
+
+I hope that helps! Let me know if you have any questions, comments, or suggestions on Twitter: [@\_seanmcp](https://twitter.com/_seanmcp).
+
+Happy coding!
