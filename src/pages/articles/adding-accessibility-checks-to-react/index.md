@@ -5,20 +5,14 @@ date: '2019-03-04T22:12:03.284Z'
 category: react
 series:
 tags: [react, accessibility, a11y]
-published: false
+published: true
 ---
 
-Let's face it: making accessible applications can be hard. Fortunately, there are some great resources available that help you check to make sure . We'll look at three great options that will help you make your React applications more accessible.
+Whether you are working for a startup, non-profit, or Fortune 500 company, accessibility is a critical component of your product. Not only it is a legal requirement in many countries[^1], but creating accessible applications maximizes the potential users for your product. And it often has a positive impact on all users ([read about the "Curb Cut Effect"](https://ssir.org/articles/entry/the_curb_cut_effect)).
 
-But first, why should anyone care about accessibility?
+As React developers, we have a responsibility to avoid hiding in the virtual DOM and instead work to ensure that the components we craft are going to work for everyone. Fortunately for us, React has [React has accessibility features built into the platform](https://reactjs.org/docs/accessibility.html) to make our jobs easier.
 
-## Accessibility is mission critical
-
-Whether you are working for a startup, non-profit, or a Fortune 500 company, accessibility is a critical component of your product. Not only it is a legal requirement in many countries, but creating accessible applications maximizes the potential users for your product. And it often has a positive impact on all users.
-
-As React developers, we have a responsibility to avoid retreating into the virtual DOM and ensure that the components we craft are going to work for everyone. Fortunately for us, React has [tons of accessibility features](https://reactjs.org/docs/accessibility.html) built into the platform to make our jobs easier.
-
-I'm going to suggest and demonstrate three additional tools than can help React developers create awesome and accessible applications for all.
+In this article, we're going to look at three additional tools than can help React developers create awesome and accessible applications for all.
 
 ## Setup
 
@@ -66,9 +60,9 @@ Uncaught (in promise) Error: [react-a11y]: App - Elements with ARIA roles must u
     <div class="App" role="app"></div>
 ```
 
-My favorite part of using react-a11y are the links they provide. Sometimes finding the recommended fix to an accessibility problem is harder than finding an issue in the first place!
+My favorite part of using react-a11y are the links they provide. Sometimes finding the recommended fix to an accessibility problem is harder than finding the issue in the first place!
 
-Console warnings are great, but let's add another tool to help catch mistakes before they make it to the browser.
+React-a11y is a popular library, but it's not the only option we have to check for our application at render.
 
 ## React-axe
 
@@ -106,15 +100,17 @@ https://dequeuniversity.com/rules/axe/3.1/aria-roles?application=axeAPI
 
 Expanding the message provides a reference to the original document and a file and line reference to fix the issue.
 
-If I had to choose between the two, I think I would lean towards react-axe over react-a11y. The console errors are helpful without being overwhelming, all while providing all the information and resources you need to fix the issue.
+If I had to choose between the two, I think I would lean towards react-axe over react-a11y. The console errors are helpful without being overwhelming and provide all the information and resources you need to fix the issue.
 
-That being said, react-a11y provides more rule customization, including the ability to create a new rule.
+That being said, react-a11y provides more rule customization, including the ability to create a new rule. So use the best option for your application and comfort level.
+
+Console warnings are great, but let's add another tool to help catch mistakes before they make it to the browser.
 
 ## Jsx-a11y
 
 Jsx-a11y is an ESLint plugin that looks over your code for some key accessibility considerations. If you don't have ESLint added to your project yet, follow their [get started guide](https://eslint.org/docs/user-guide/getting-started).
 
-If you bootstrapped your React app with `create-react-app`, it already has ESLint included. Just add the plugin library:
+If you bootstrapped your React app with `create-react-app` like I did, it already has ESLint included. Just add the plugin library:
 
 ```
 yarn add --dev eslint-plugin-jsx-a11y
@@ -140,14 +136,18 @@ Now if we make a change that reduces our app's accessibility, like removing the 
 
 If you want more customization over which rules jsx-a11y uses, refer to [the official documentation](https://github.com/evcohen/eslint-plugin-jsx-a11y#eslint-plugin-jsx-a11y).
 
+If you are using a text editor like VS Code that features in-line linting, you can identify and fix potential accessibility issues before you even save.
+
+With these tools in place, you're well on your way to creating more accessible React applications!
+
 ## A11y-react-starter
 
 I created [`a11y-react-starter`](https://github.com/seanmcp/a11y-react-starter), a lightly-configured create-react-app with all of the above accessibility checking baked in. Check it out for a reference or use it as a starting point for your next app.
 
 ## Conclusion
 
-By enabling these accessibility features, you're adding the wisdom and knowledge of countless developers who have gone before you. With their help, and a little bit of learning, anyone can create accessible applications that work for all users.
-
-I hope that helps! Let me know if you have any questions, comments, or suggestions on Twitter: [@\_seanmcp](https://twitter.com/_seanmcp).
+By enabling these accessibility features, you're adding the wisdom and knowledge of the many developers who have gone before you. With their help, and a little bit of learning, anyone can create accessible applications that work for all users.
 
 Happy coding!
+
+[^1]: [Web accessibility: Web accessibility legislation](https://en.wikipedia.org/wiki/Web_accessibility#Web_accessibility_legislation) on WikiPedia
