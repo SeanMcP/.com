@@ -150,4 +150,4 @@ By enabling these accessibility features, you're adding the wisdom and knowledge
 
 Happy coding!
 
-[^1]: [Web accessibility: Web accessibility legislation](https://en.wikipedia.org/wiki/Web_accessibility#Web_accessibility_legislation) on WikiPedia
+[^1]: [Web accessibility: Web accessibility legislation](https://en.wikipedia.org/wiki/Web_accessibility#Web_accessibility_legislation) on Wikipedia
