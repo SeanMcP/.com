@@ -47,6 +47,7 @@ const BlogIndex = props => {
           summary={node.excerpt}
           title={get(node, 'frontmatter.title') || node.fields.slug}
           time={node.timeToRead}
+          update={node.frontmatter.update}
         />
       ))}
       <StyledP>
@@ -81,6 +82,7 @@ export const pageQuery = graphql`
           timeToRead
           frontmatter {
             date(formatString: "MMM. D, YYYY")
+            update(formatString: "MMM. D, YYYY")
             category
             summary
             tags

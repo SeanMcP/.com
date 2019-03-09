@@ -24,6 +24,7 @@ const TagTemplate = props => {
           summary={node.excerpt}
           time={node.timeToRead}
           title={get(node, 'frontmatter.title') || node.fields.slug}
+          update={node.frontmatter.update}
         />
       ))}
     </Layout>
@@ -57,6 +58,7 @@ export const pageQuery = graphql`
             summary
             tags
             title
+            update(formatString: "MMM. D, YYYY")
           }
           timeToRead
         }

@@ -57,8 +57,11 @@ const PostTemplate = props => {
           <CategoryIconLink category={post.frontmatter.category} rounded />
           <StyledH1>{postTitle}</StyledH1>
           <StyledPostMetaDiv>
-            <PostDate date={post.frontmatter.date} hideIcon /> |{' '}
-            <PostTime time={post.timeToRead} hideIcon />
+            <PostDate
+              date={post.frontmatter.update || post.frontmatter.date}
+              hideIcon
+            />{' '}
+            | <PostTime time={post.timeToRead} hideIcon />
           </StyledPostMetaDiv>
         </StyledPostHeaderDiv>
         <div
@@ -101,6 +104,7 @@ export const pageQuery = graphql`
         summary
         tags
         title
+        update(formatString: "MMM. D, YYYY")
       }
       timeToRead
     }

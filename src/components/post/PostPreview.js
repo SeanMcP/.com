@@ -16,7 +16,7 @@ const PostPreview = props => (
         <Styled.H3>{props.title}</Styled.H3>
       </Link>
       <Styled.MetaContainerDiv>
-        <PostDate date={props.date} hideIcon /> |{' '}
+        <PostDate date={props.update || props.date} hideIcon /> |{' '}
         <PostTime time={props.time} hideIcon />
       </Styled.MetaContainerDiv>
       {props.summary && <Styled.SummaryP>{props.summary}</Styled.SummaryP>}
@@ -29,7 +29,8 @@ PostPreview.propTypes = {
   category: PropTypes.string.isRequired,
   slug: PropTypes.string.isRequired,
   time: PropTypes.number.isRequired,
-  title: PropTypes.string.isRequired
+  title: PropTypes.string.isRequired,
+  update: PropTypes.string
 }
 
 export default PostPreview
