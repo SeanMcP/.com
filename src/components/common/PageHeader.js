@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled, { css } from 'styled-components'
+import styled, { css } from 'styled-components/macro'
 
 const StyledDiv = styled.div`
   ${({ centered }) =>
@@ -15,9 +15,10 @@ const StyledDiv = styled.div`
   }
 `
 
-const PageHeader = ({ centered, children }) => {
+const PageHeader = ({ centered, children, heading }) => {
   return (
     <StyledDiv centered={centered}>
+      <h2>{heading}</h2>
       {children}
       <hr />
     </StyledDiv>

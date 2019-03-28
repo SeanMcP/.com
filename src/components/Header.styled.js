@@ -1,29 +1,28 @@
-import { Link as _Link } from 'gatsby'
-import styled, { css } from 'styled-components'
+import styled from 'styled-components/macro'
 
 export const Header = styled.header`
-  box-shadow: 0 0 1rem rgba(0, 0, 0, 0.125);
-  padding: 1rem 0;
-  position: relative;
+  margin-top: 2rem;
+  text-align: center;
 `
 
-export const Link = styled(_Link)`
-  align-items: center;
-  display: flex;
+export const H1 = styled.h1`
+  /* margin-bottom: 0; */
+
+  ::after {
+    content: 'herson';
+  }
+
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    font-size: 1.5rem;
+
+    ::after {
+      content: initial;
+    }
+  }
 `
 
-export const Button = styled.button`
-  align-items: center;
-  background: none;
-  border: none;
-  cursor: pointer;
-  display: flex;
-  justify-content: center;
-  margin-right: -0.5rem;
-
-  ${props =>
-    props.isOpen &&
-    css`
-      color: ${props.theme.primary_dark};
-    `}
-`
+// export const FlexBox = styled.div`
+//   align-items: center;
+//   display: flex;
+//   justify-content: space-between;
+// `

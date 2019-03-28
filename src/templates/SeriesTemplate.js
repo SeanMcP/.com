@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/Layout'
-import PostPreview from '../components/post/PostPreview'
+import PostPreview from '../components/post/ArticlePreview'
 import PageHeader from '../components/common/PageHeader'
 
 const copy = {

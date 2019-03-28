@@ -7,7 +7,7 @@ import CategoryIcon from './CategoryIcon'
 const CategoryIconLink = ({ showLabel, ...props }) => {
   return (
     <Link to={`/category/${props.category}`}>
-      <CategoryIcon {...props} style={{ width: '1rem' }} />
+      <CategoryIcon {...props} />
       {showLabel && <b>{capitalize(props.category)}</b>}
     </Link>
   )

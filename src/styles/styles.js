@@ -1,4 +1,4 @@
-import { createGlobalStyle } from 'styled-components'
+import { createGlobalStyle } from 'styled-components/macro'
 
 export default createGlobalStyle`
     a, a:visited {
@@ -15,10 +15,5 @@ export default createGlobalStyle`
 
     hr {
         background: ${props => props.theme.secondary};
-    }
-
-    *:focus {
-        outline: none;
-        box-shadow: 0 0 0 4px ${p => p.theme.accent};
     }
 `

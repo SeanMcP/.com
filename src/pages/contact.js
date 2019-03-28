@@ -17,8 +17,7 @@ const Contact = ({ data, location }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`Contact - ${siteTitle}`}
       />
-      <PageHeader>
-        <h1>Contact</h1>
+      <PageHeader heading="Contact">
         <p>
           Do you have an excited job opportunity for me?{' '}
           <a

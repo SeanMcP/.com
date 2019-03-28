@@ -6,7 +6,8 @@ import Helmet from 'react-helmet'
 import ArticleCategories from '../components/common/ArticleCategories'
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/PostPreview'
+import PostPreview from '../components/post/ArticlePreview'
+import ContentContainer from '../components/ContentContainer'
 
 const Articles = props => {
   const siteTitle = get(props, 'data.site.siteMetadata.title')
@@ -21,22 +22,17 @@ const Articles = props => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`Articles - ${siteTitle}`}
       />
-      <PageHeader>
-        <h1>Articles</h1>
+      <PageHeader heading="Articles">
         {categories && (
           <ArticleCategories list={categories} navigate={props.navigate} />
         )}
       </PageHeader>
       {posts.map(({ node }) => (
         <PostPreview
+          {...node.frontmatter}
           key={node.fields.slug}
-          category={node.frontmatter.category}
-          date={node.frontmatter.date}
           slug={node.fields.slug}
           summary={node.excerpt}
-          time={node.timeToRead}
-          title={get(node, 'frontmatter.title') || node.fields.slug}
-          update={node.frontmatter.update}
         />
       ))}
     </Layout>

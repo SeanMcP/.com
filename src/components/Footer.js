@@ -1,12 +1,10 @@
 import React from 'react'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
-import Responsive from './common/Responsive'
+import ContentContainer from './ContentContainer'
 
 const StyledFooter = styled.footer`
-  background: ${props => props.theme.text};
-  color: ${props => props.theme.secondary_light};
-  padding: 1rem 0;
+  padding: 0 0 2rem;
 
   p {
     margin: 0;
@@ -17,10 +15,10 @@ const Footer = () => {
   const year = new Date().getFullYear()
   return (
     <StyledFooter>
-      <Responsive justifyContent="space-between" overrideMobileColumn>
-        <p>© Sean McPherson 2018 - {year}</p>
-        <p>(SDG)</p>
-      </Responsive>
+      <hr />
+      <ContentContainer>
+        <p>© Sean McPherson 2018 - {year} (SDG)</p>
+      </ContentContainer>
     </StyledFooter>
   )
 }

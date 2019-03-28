@@ -1,3 +1,5 @@
+const size = 40
+
 export const theme = {
   primary: '#42a5f5',
   primary_dark: '#0077c2',
@@ -11,8 +13,8 @@ export const theme = {
   accent_light: '#ffd740',
   accent_dark: '#ffab00',
   text: '#424242',
-  size: '50rem',
-  size_mobile: '52rem', // size + 2rem
+  size: `${size}rem`,
+  size_mobile: `${size + 2}rem`,
   font_body: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
   font_mono: `Menlo, Monaco, "Roboto Sans", Consolas, "Andale Mono", "Ubuntu Mono", monospace`
 }

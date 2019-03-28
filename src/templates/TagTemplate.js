@@ -4,7 +4,7 @@ import Helmet from 'react-helmet'
 import get from 'lodash/get'
 
 import Layout from '../components/Layout'
-import PostPreview from '../components/post/PostPreview'
+import PostPreview from '../components/post/ArticlePreview'
 import SearchHeader from '../components/common/SearchHeader'
 
 const TagTemplate = props => {

@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/PostPreview'
+import PostPreview from '../components/post/ArticlePreview'
 
 const SuccessPage = ({ data, location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')

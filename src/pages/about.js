@@ -18,8 +18,7 @@ const AboutPage = ({ data, location }) => {
         meta={[{ name: 'description', content: siteDescription }]}
         title={`About - ${siteTitle}`}
       />
-      <PageHeader>
-        <h1>About</h1>
+      <PageHeader heading="About">
         <p>
           An educator turned software developer with a love for helping people
         </p>

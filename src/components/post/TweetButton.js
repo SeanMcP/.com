@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import Icon from '../common/Icon'
 
@@ -12,6 +12,7 @@ const StyledA = styled.a`
   @media screen and (max-width: ${p => p.theme.size_mobile}) {
     border: 2px solid ${p => p.theme.primary_dark};
     border-radius: 5rem;
+    justify-content: center;
     margin-right: auto;
     margin-top: 1rem;
     padding: 1rem 2rem;

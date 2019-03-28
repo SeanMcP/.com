@@ -2,13 +2,14 @@ import React from 'react'
 import { graphql } from 'gatsby'
 import get from 'lodash/get'
 import Helmet from 'react-helmet'
-import styled from 'styled-components'
+import styled from 'styled-components/macro'
 
 import { Introduction } from '../components/text/Text'
 import Layout from '../components/Layout'
-import PostPreview from '../components/post/PostPreview'
+import ArticlePreview from '../components/post/ArticlePreview'
 import Projects from '../components/home/Projects'
 import Icon from '../components/common/Icon'
+import ContentContainer from '../components/ContentContainer'
 
 const StyledP = styled.p`
   align-items: center;
@@ -35,25 +36,16 @@ const BlogIndex = props => {
         title={siteTitle}
       />
       <Introduction />
-      <Projects />
       <h2>Recent articles</h2>
       <hr className="--short" />
       {posts.map(({ node }) => (
-        <PostPreview
-          key={node.fields.slug}
-          category={node.frontmatter.category}
-          date={node.frontmatter.date}
-          slug={node.fields.slug}
-          summary={node.excerpt}
-          title={get(node, 'frontmatter.title') || node.fields.slug}
-          time={node.timeToRead}
-          update={node.frontmatter.update}
-        />
+        <ArticlePreview key={node.fields.slug} {...node} />
       ))}
       <StyledP>
         <StyledIcon icon="Rss" />
         <a href="./rss.xml">Subscribe to the blog (RSS)</a>
       </StyledP>
+      <Projects />
     </Layout>
   )
 }
@@ -71,7 +63,7 @@ export const pageQuery = graphql`
     allMarkdownRemark(
       filter: { frontmatter: { published: { eq: true } } }
       sort: { fields: [frontmatter___date], order: DESC }
-      limit: 3
+      limit: 5
     ) {
       edges {
         node {

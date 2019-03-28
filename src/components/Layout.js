@@ -1,5 +1,5 @@
 import React from 'react'
-import styled, { ThemeProvider } from 'styled-components'
+import styled, { ThemeProvider } from 'styled-components/macro'
 
 import '../styles/_index.css'
 import { theme } from '../styles/theme'
@@ -10,6 +10,8 @@ import Responsive from './common/Responsive'
 import Footer from './Footer'
 import SkipLink from './SkipLink'
 
+import * as S from './Layout.styled'
+import ContentContainer from './ContentContainer'
 const StyledContainer = styled.div`
   display: flex;
   flex-direction: column;
@@ -27,19 +29,21 @@ const StyledMain = styled.main`
   padding: 1rem 0;
 `
 
-const Layout = ({ location, title, children }) => {
+const Layout = ({ freeform, location, title, children }) => {
+  const Wrapper = freeform ? React.Fragment : ContentContainer
   return (
     <ThemeProvider theme={theme}>
-      <StyledContainer>
-        <SkipLink />
+      <>
         <GlobalStyle />
-        <Header location={location} title={title} />
-        <Billboard isRoot={location.pathname === '/'} />
-        <StyledResponsive>
-          <StyledMain id="main">{children}</StyledMain>
-        </StyledResponsive>
+        <SkipLink />
+        <Header />
+        <Wrapper>
+          <S.Main role="main" id="main">
+            {children}
+          </S.Main>
+        </Wrapper>
         <Footer />
-      </StyledContainer>
+      </>
     </ThemeProvider>
   )
 }
