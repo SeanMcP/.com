@@ -12,8 +12,12 @@ const StyledLink = styled(Link)`
   }
 `
 
+const queryMap = {
+  categories: 'category'
+}
+
 const SearchLink = ({ queryKey, queryValue }) => (
-  <StyledLink to={`/${queryKey}/${kebabCase(queryValue)}`}>
+  <StyledLink to={`/${queryMap[queryKey]}/${kebabCase(queryValue)}/`}>
     {queryKey === 'categories' ? capitalize(queryValue) : queryValue}
   </StyledLink>
 )
