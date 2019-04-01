@@ -4,14 +4,18 @@ import * as AllIcons from 'react-feather'
 
 const Icon = ({ ariaLabel, className, icon, size }) => {
   const I = AllIcons[icon]
-  return (
-    <I
-      aria-label={ariaLabel ? ariaLabel : undefined}
-      aria-hidden={ariaLabel ? undefined : true}
-      className={className}
-      size={size}
-    />
-  )
+  // console.log(Object.keys(AllIcons));
+  if (I) {
+    return (
+      <I
+        aria-label={ariaLabel ? ariaLabel : undefined}
+        aria-hidden={ariaLabel ? undefined : true}
+        className={className}
+        size={size}
+      />
+    )
+  }
+  return null
 }
 
 Icon.propTypes = {
