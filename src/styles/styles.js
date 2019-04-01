@@ -16,4 +16,9 @@ export default createGlobalStyle`
     hr {
         background: ${p => p.theme.secondary};
     }
+
+    a:focus, button:focus {
+        box-shadow: 0 0 0 2px ${p => p.theme.accent};
+        outline: none;
+    }
 `

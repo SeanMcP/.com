@@ -1,11 +1,13 @@
 import styled from 'styled-components/macro'
-import _ExternalLink from '../common/ExternalLink'
 import _Icon from '../common/Icon'
 
 export const Container = styled.div`
-  @media screen and (min-width: ${p => p.theme.size}) {
-    align-items: center;
-    display: flex;
+  align-items: center;
+  display: flex;
+
+  @media screen and (max-width: ${p => p.theme.size}) {
+    flex-direction: column;
+    text-align: center;
   }
 `
 
@@ -22,32 +24,11 @@ export const Header = styled.header`
   }
 `
 
-export const ExternalLink = styled(_ExternalLink)`
-  align-items: center;
-  display: flex;
-
-  @media screen and (max-width: ${p => p.theme.size}) {
-    border: 1px solid ${p => p.theme.primary};
-    border-radius: 0.5rem;
-    justify-content: center;
-    margin-top: 0.5rem;
-    padding: 0.5rem;
-  }
-
+export const Message = styled.span`
   @media screen and (min-width: ${p => p.theme.size}) {
-    display: inline;
-    margin-left: 0.25rem;
-
-    svg {
-      display: none;
-    }
-
-    &:not(:last-of-type)::after {
-      content: ',';
-    }
-
-    &:last-of-type::before {
-      content: 'or ';
+    margin-right: 0.5rem;
+    &::after {
+      content: ':';
     }
   }
 `
@@ -57,5 +38,5 @@ export const Icon = styled(_Icon)`
 `
 
 export const Nav = styled.nav`
-  display: inline;
+  display: flex;
 `

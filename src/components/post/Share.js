@@ -1,5 +1,6 @@
 import React from 'react'
 
+import SocialShareIcon from '../common/SocialShareIcon'
 import * as S from './Share.styled'
 
 const Share = ({ title, url }) => {
@@ -10,39 +11,27 @@ const Share = ({ title, url }) => {
     <S.Container>
       <S.Header>
         <S.Icon icon="Share2" />
-        <span>Share this article:</span>
+        <S.Message>Share this article</S.Message>
       </S.Header>
       <S.Nav>
-        <S.ExternalLink
+        <SocialShareIcon
+          platform="twitter"
           href={`https://twitter.com/intent/tweet?text=${createMessage(
             '@_seanmcp'
           )}`}
-          aria-label="Share this article on Twitter"
-        >
-          <S.Icon icon="Twitter" />
-          Twitter
-        </S.ExternalLink>
-        <S.ExternalLink
+        />
+        <SocialShareIcon
+          platform="reddit"
           href={`https://reddit.com/submit?url=${url}`}
-          aria-label="Share this article on Reddit"
-        >
-          <S.Icon icon="ArrowUp" />
-          Reddit
-        </S.ExternalLink>
-        <S.ExternalLink
+        />
+        <SocialShareIcon
+          platform="linkedin"
           href={`https://linkedin.com/shareArticle?url=${url}`}
-          aria-label="Share this article on Linked In"
-        >
-          <S.Icon icon="Linkedin" />
-          LinkedIn
-        </S.ExternalLink>
-        <S.ExternalLink
+        />
+        <SocialShareIcon
+          platform="facebook"
           href={`https://facebook.com/sharer/sharer.php?u=${url}`}
-          aria-label="Share this article on Facebook"
-        >
-          <S.Icon icon="Facebook" />
-          Facebook
-        </S.ExternalLink>
+        />
       </S.Nav>
     </S.Container>
   )
