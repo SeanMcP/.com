@@ -5,7 +5,7 @@ import get from 'lodash/get'
 
 import Layout from '../components/Layout'
 import PageHeader from '../components/common/PageHeader'
-import PostPreview from '../components/post/ArticlePreview'
+import ArticlePreview from '../components/post/ArticlePreview'
 
 const SuccessPage = ({ data, location }) => {
   const siteTitle = get(data, 'site.siteMetadata.title')
@@ -27,17 +27,7 @@ const SuccessPage = ({ data, location }) => {
         </p>
       </PageHeader>
       {posts.map(({ node }) => (
-        <PostPreview
-          key={node.fields.slug}
-          category={node.frontmatter.category}
-          date={node.frontmatter.date}
-          slug={node.fields.slug}
-          summary={node.excerpt}
-          tags={node.frontmatter.tags}
-          time={node.timeToRead}
-          title={get(node, 'frontmatter.title') || node.fields.slug}
-          update={node.frontmatter.update}
-        />
+        <ArticlePreview key={node.fields.slug} {...node} />
       ))}
     </Layout>
   )
