@@ -1,19 +1,36 @@
 import styled from 'styled-components/macro'
 
 export const Header = styled.header`
-  margin-top: 2rem;
-  text-align: center;
+  background: ${p => p.theme.primary_extra_dark};
+  color: ${p => p.theme.text_inverse};
+  padding: 1rem 0;
+
+  @media screen and (max-width: ${p => p.theme.size_mobile}) {
+    text-align: center;
+  }
+
+  a {
+    color: ${p => p.theme.text_inverse};
+    text-decoration: none;
+  }
+
+  a:hover {
+    color: ${p => p.theme.accent};
+    /* text-decoration: underline;s */
+  }
 `
 
 export const H1 = styled.h1`
-  /* margin-bottom: 0; */
+  display: inline;
+  font-size: 1rem;
 
   ::after {
     content: 'herson';
   }
 
   @media screen and (max-width: ${p => p.theme.size_mobile}) {
-    font-size: 2rem;
+    display: block;
+    font-size: 1.5rem;
 
     ::after {
       content: initial;

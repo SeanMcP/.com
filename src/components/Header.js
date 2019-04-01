@@ -17,7 +17,6 @@ const Header = () => {
         <MainNav />
         {/* </S.FlexBox> */}
       </ContentContainer>
-      <hr />
     </S.Header>
   )
 }
