@@ -9,7 +9,6 @@ import Layout from '../components/Layout'
 import ArticlePreview from '../components/post/ArticlePreview'
 import Projects from '../components/home/Projects'
 import Icon from '../components/common/Icon'
-import ContentContainer from '../components/ContentContainer'
 
 const StyledP = styled.p`
   align-items: center;
@@ -20,7 +19,7 @@ const StyledP = styled.p`
 `
 
 const StyledIcon = styled(Icon)`
-  margin-right: 0.25rem;
+  margin-right: 0.5rem;
 `
 
 const BlogIndex = props => {
