@@ -13,6 +13,7 @@ export const theme = {
   accent_light: '#ffd740',
   accent_dark: '#ffab00',
   text: '#424242',
+  text_inverse: '#ffffff',
   size: `${siteWidth}rem`,
   size_mobile: `${siteWidth + 2}rem`,
   font_body: `-apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif`,
