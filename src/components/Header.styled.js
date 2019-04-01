@@ -13,7 +13,7 @@ export const H1 = styled.h1`
   }
 
   @media screen and (max-width: ${p => p.theme.size_mobile}) {
-    font-size: 1.5rem;
+    font-size: 2rem;
 
     ::after {
       content: initial;
