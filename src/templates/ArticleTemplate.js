@@ -4,7 +4,7 @@ import styled from 'styled-components/macro'
 import get from 'lodash/get'
 
 import Layout from '../components/Layout'
-import PostBio from '../components/post/PostBio'
+import ArticleBio from '../components/post/ArticleBio'
 import ArticleDate from '../components/post/ArticleDate'
 import PostHelmet from '../components/post/PostHelmet'
 
@@ -54,7 +54,7 @@ const ArticleTemplate = props => {
           <hr />
           <Share title={post.frontmatter.title} url={location.href} />
           <hr />
-          <PostBio />
+          <ArticleBio />
         </ContentContainer>
       </article>
     </Layout>
