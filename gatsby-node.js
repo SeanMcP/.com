@@ -1,4 +1,7 @@
-const _ = require('lodash')
+const each = require('lodash/each')
+const get = require('lodash/get')
+const kebabCase = require('lodash/kebabCase')
+const uniq = require('lodash/uniq')
 const Promise = require('bluebird')
 const path = require('path')
 const { createFilePath } = require('gatsby-source-filesystem')
@@ -46,20 +49,20 @@ exports.createPages = ({ graphql, actions }) => {
 
         // Series
         let series = []
-        _.each(posts, edge => {
+        each(posts, edge => {
           if (
-            _.get(edge, 'node.frontmatter.published') &&
-            _.get(edge, 'node.frontmatter.series')
+            get(edge, 'node.frontmatter.published') &&
+            get(edge, 'node.frontmatter.series')
           ) {
             series.push(edge.node.frontmatter.series)
           }
         })
-        series = _.uniq(series)
+        series = uniq(series)
 
         // Create series pages
         series.forEach(series => {
           createPage({
-            path: `/series/${_.kebabCase(series)}/`,
+            path: `/series/${kebabCase(series)}/`,
             component: SeriesTemplate,
             context: {
               series
@@ -70,21 +73,21 @@ exports.createPages = ({ graphql, actions }) => {
         // Category pages:
         let categories = []
         // Iterate through each post, putting all found categories into `categories`
-        _.each(posts, edge => {
+        each(posts, edge => {
           if (
-            _.get(edge, 'node.frontmatter.published') &&
-            _.get(edge, 'node.frontmatter.category')
+            get(edge, 'node.frontmatter.published') &&
+            get(edge, 'node.frontmatter.category')
           ) {
             categories.push(edge.node.frontmatter.category)
           }
         })
         // Eliminate duplicate categories
-        categories = _.uniq(categories)
+        categories = uniq(categories)
 
         // Make category pages
         categories.forEach(category => {
           createPage({
-            path: `/category/${_.kebabCase(category)}/`,
+            path: `/category/${kebabCase(category)}/`,
             component: CategoryTemplate,
             context: {
               category
@@ -92,7 +95,7 @@ exports.createPages = ({ graphql, actions }) => {
           })
         })
 
-        _.each(posts, post => {
+        each(posts, post => {
           if (post.node.frontmatter.published) {
             createPage({
               path: `${post.node.fields.slug.slice(1)}`,
