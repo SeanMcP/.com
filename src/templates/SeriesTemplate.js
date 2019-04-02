@@ -5,7 +5,7 @@ import get from 'lodash/get'
 import kebabCase from 'lodash/kebabCase'
 
 import Layout from '../components/Layout'
-import PostPreview from '../components/post/ArticlePreview'
+import ArticlePreview from '../components/post/ArticlePreview'
 import PageHeader from '../components/common/PageHeader'
 
 const copy = {
@@ -21,8 +21,7 @@ const SeriesTemplate = props => {
   return (
     <Layout location={props.location} title={siteTitle}>
       <Helmet title={`${series} series | ${siteTitle}`} />
-      <PageHeader>
-        <h1>{series}</h1>
+      <PageHeader heading={series}>
         <p>
           {copy[seriesKey]
             ? copy[seriesKey]
@@ -31,16 +30,7 @@ const SeriesTemplate = props => {
         </p>
       </PageHeader>
       {posts.map(({ node }) => (
-        <PostPreview
-          key={node.fields.slug}
-          category={node.frontmatter.category}
-          summary={node.excerpt}
-          date={node.frontmatter.date}
-          slug={node.fields.slug}
-          time={node.timeToRead}
-          title={get(node, 'frontmatter.title') || node.fields.slug}
-          update={node.frontmatter.update}
-        />
+        <ArticlePreview key={node.fields.slug} {...node} />
       ))}
     </Layout>
   )
